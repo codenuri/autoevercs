@@ -41,3 +41,7 @@ class CompilerGeneratedName
 // => 함수 안에 함수를 만들수 있다.(nested function)
 // => 단, nested function 은 오버로딩 될수 없다.
 //    즉, 동일이름 함수를 여러개 만들수 없다.
+
+// 위와 같은 이유로 학습시 혼란에 빠질수 있습니다.
+// => 간단한 코드를 제외한 대부분의 복잡한 문법사용은
+// => Top Level 로 하지 마세요.. 
