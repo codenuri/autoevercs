@@ -2,6 +2,9 @@
 
 int dayofweek = 1;
 
+// 아래 코드는 switch statement 입니다
+// 특징 : s1 변수를 먼저 선언해야 합니다.
+
 string s1 = "";
 
 switch(dayofweek)
@@ -11,3 +14,17 @@ switch(dayofweek)
 	case 2: s1 = "tue"; break;
 	default : s1 = "unknown"; break;
 }
+
+// 아래 코드는 switch expression 입니다.
+// => expression 이므로 = 의 왼쪽에 올수 있습니다.
+
+string s2 = dayofweek switch
+				{
+					0 => "sun",
+                    1 => "mon",
+					2 => "tue",
+					_ => "unknown",  // _는 default 의미									 
+                };
+ 
+// switch expression 은 한개의 값을 만들어야 하므로
+// => _ 를 생략할수 없다.
