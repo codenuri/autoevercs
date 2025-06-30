@@ -26,21 +26,28 @@ using System;
 
 
 
-
-
 Console.Write("input 1 >> ");
 string s = Console.ReadLine();	 // 입력 대기
 Console.WriteLine(s);			 // "ABCD"	
 
 
 Console.Write("input 2 >> ");
-int n = Console.Read();		
+int n = Console.Read();		// 1. 입력 버퍼가 비었으므로 다시 대기
+							// 2. "ABCD" 입력시
+							// 3. "A" 만 꺼내 가고
+							// 4. 입력 버퍼에는 "BCD" 남음
 							
 Console.WriteLine("{0}, {1}", n, (char)n); 	//"A"
 
 
 Console.Write("input 2 >> ");
-n = Console.Read();		
+n = Console.Read();		// 핵심
+						// 1. 아직 입력 버퍼에 "BCD" 남아 있다
+						// 2. 키보드에서 => 입력 버퍼에 담는 루틴 실행안됨
+						// 3. 입력 버퍼에서 "B" 꺼내감.
+						// 즉, 이순간은 대기가 없다
+
+
 Console.WriteLine("{0}, {1}", n, (char)n);	
  
 
