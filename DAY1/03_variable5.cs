@@ -50,8 +50,13 @@ n1 = (int)3.4;// ok
 // 3. nameof
 int color = 100;
 
-WriteLine($"{color}");
-WriteLine($"{nameof(color)}");
+WriteLine($"{color}");          // 100. 즉, 변수값 출력
+WriteLine($"{nameof(color)}");  // "color" 출력, 즉
+                                // 변수이름을 문자열로. 
+
+WriteLine($"color"); // 그냥, 이렇게 하면 안되나요 ?
+                     // 복잡한 코드에서는 변수 이름을 모르는 경우가 있습니다.
+
 
 
 
