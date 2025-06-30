@@ -25,10 +25,14 @@ Console.WriteLine($"a = {a}, b = {b}, a+b = {a + b}");
 
 
 
-/*
-// casting
-double d = 3.4;
-int n1 = d;		// ?
+
+// #2. casting 이야기
+int n1 = 0;     // n1 정수를 담는 4바이트 크기 "박스"
+
+n1 = 3.4; // ? 
+
+
+
 
 
 // nameof
