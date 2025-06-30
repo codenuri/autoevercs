@@ -22,6 +22,7 @@ for( int i = 0; i < 10;  i++ )
 
 // #2. Python 스타일
 
+// for e in x    <= 파이썬
 foreach( int e in x ) // x의 모든 요소를 차례대로 e에 담아달라.
 {
     WriteLine($"{e}");
