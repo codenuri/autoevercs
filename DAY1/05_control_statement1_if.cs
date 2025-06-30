@@ -22,4 +22,17 @@ using static System.Console;
 
 int score = 75;
 
+if ( score > 70 )
+{
+    WriteLine("Pass");
+}
+else if ( score < 40 )
+{
+    WriteLine("Fail");
+}
+else
+{
+    WriteLine("Reexam");
+}
+
 
