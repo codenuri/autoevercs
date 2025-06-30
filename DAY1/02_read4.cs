@@ -26,3 +26,10 @@ Console.WriteLine((char)n); // 'A'
 ConsoleKeyInfo key = Console.ReadKey(true); // 입력문자 echo 안됨
 
 Console.WriteLine(key.KeyChar); // <== 입력된 문자
+
+// 대부분의 프로그램 언어는
+// => 1. 입력 버퍼에서 꺼내는 개념과
+// => 2. 키보드로부터 직접 입력 개념을 모두 지원합니다.
+
+// 2번은 주로 게임에서 널리 사용
+// 1번은 일반적인 형태의 프로그램에서
