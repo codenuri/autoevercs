@@ -22,11 +22,14 @@ using static System.Console;
 
 int score = 75;
 
-if ( score > 70 )
+// 핵심 #1. 파이썬은 () 생략가능하지만, C# 은 필수!
+//      2. C 언어는 실행문장이 1줄이면 {} 생략가능, C#은 필수
+
+if (score > 70)
 {
     WriteLine("Pass");
 }
-else if ( score < 40 )
+else if (score < 40)
 {
     WriteLine("Fail");
 }
@@ -35,4 +38,8 @@ else
     WriteLine("Reexam");
 }
 
+// 주의 () 안에는 반드시 bool 타입만 가능합니다.
+if ( score ) // C 언어 ok. score가 0이면 false, 0 아니면 true
+{            // C# error. (score != 0) 으로 해야 한다.
+}
 
