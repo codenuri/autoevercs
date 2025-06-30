@@ -34,3 +34,6 @@ String s2 = "A";
 System.String s3 = "A";
 
 // 29 page 표 참고
+
+// 참고
+// => C# 의 int, double 등은 struct 문법으로 만든 타입입니다.
