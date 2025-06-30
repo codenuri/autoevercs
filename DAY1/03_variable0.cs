@@ -29,7 +29,7 @@
 // byte : "정수" 를 보관할 "1바이트(8비트)" 메모리 할당에 사용
 byte n1 = 0;   // 정수 8비트 크기
 byte n2 = 255; // ok.  1바이트에는 0 ~ 255 까지 보관가능
-byte n3 = 256; // error. 256 을 1byte 에 담을수 없다.
+//byte n3 = 256; // error. 256 을 1byte 에 담을수 없다.
 
 short n4 = 256; // ok.. "0 ~ 65535" 까지 보관 가능.
 //              2^16 이 25536 인데, 0 도 필요하면 65535까지 가능
@@ -43,7 +43,7 @@ short n4 = 256; // ok.. "0 ~ 65535" 까지 보관 가능.
 
 // 실수 : double 사용하세요(8바이트)
 
-float f1 = 1234.1234; // error. 모든 실수형 리터럴은 double 타입
-float f2 = 1234.1234f; // ok
+//float f1 = 1234.1234; // error. 모든 실수형 리터럴(값)은 double 타입
+float f2 = 1234.1234f; // ok "1234.1234" 를 float 로 해석해 달라.
 
-Console.WriteLine(f2);
+Console.WriteLine(f2); // ??
