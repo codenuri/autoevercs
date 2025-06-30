@@ -32,3 +32,5 @@ System.Double d3 = 0;
 string s1 = "A";
 String s2 = "A";
 System.String s3 = "A";
+
+// 29 page Ç¥ Âü°í
