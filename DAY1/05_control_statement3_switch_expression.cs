@@ -28,3 +28,13 @@ string s2 = dayofweek switch
  
 // switch expression 은 한개의 값을 만들어야 하므로
 // => _ 를 생략할수 없다.
+
+// C# 의 if 는 expression 이 아닙니다. 하지만
+// Rust 언어는 if 도 expression 입니다.
+// Rust 코드
+
+// let ret = if n == 1 { 0 } else { 1 }; // else 생략 안됨
+
+// let 은 C#의 var
+
+// 요즘 새로운 언어는 "제어문을 expression" 화 하고 있습니다.
