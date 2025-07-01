@@ -37,7 +37,11 @@ int  n3 = s.Length;        // 속성(Property) 는 ()가 없습니다.
 string s5 = "  AAABB  ";
 
 // s5 의 앞뒤 공백을 제거한 문자열을 얻고 싶다.
-string s6 = ?;
+// => s5 의 데이타 관련 작업이므로
+// => "s5." 입력후, 메소드나 프라퍼티중에서 공백제거하는거
+//    찾으세요
+
+string s6 = s5.Trim();
 
 WriteLine($"{s5}"); // "  AAABB  "
 WriteLine($"{s6}"); // "AAABB"
