@@ -34,5 +34,7 @@ class Program
     {
         Rect rc = new Rect();
         int ret = rc.GetArea();
+
+        Console.WriteLine($"{ret}"); // 0
     }
 }
