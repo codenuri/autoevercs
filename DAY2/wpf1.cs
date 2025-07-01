@@ -7,10 +7,22 @@
 // WPF 를 사용해 봅시다.
 // 1. TopLevel Program 은 안됨. Main Method 방식
 
+// 2. WPF 라이브러리를 사용하려면 프로젝트 설정에서
+//    => WPF 를 사용하도록 변경해야 합니다.
+//    => WPF 교재 4 page 참고
+
+
+using System.Windows;
+
 class Program
 {
     public static void Main()
     {
         Console.WriteLine("Hello");
+
+        // 메세지박스 나타내기
+        // => MessageBox 클래스의 static method 사용
+
+        MessageBox.Show("Hello");
     }
 }
