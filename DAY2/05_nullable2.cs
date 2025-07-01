@@ -27,4 +27,6 @@ if ( n1.hasValue )
 }
 
 // #2. Nullable 의 GetValueOrDefault() 메소드 사용
-int n5 = n1.
+int n5 = n1.GetValueOrDefault(9); // n1 != null 이면 n1 이 가진값
+                                  // n1 == null 이면 9
+int n6 = n1.GetValueOrDefault();  // n1 == null 이면 int 의 디폴트값(0)
