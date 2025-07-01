@@ -32,6 +32,13 @@ WriteLine($"{int.MinValue}");
 // #1. 먼저 문자열로 입력 받은후
 string s3 = Console.ReadLine();
 
-// #2. 문자열을 정수로 변경해야 한다.
+// #2. 문자열을 정수로 변경해야 한다. ("10" => 10
 // => int 관련 작업이므로
+
 int n3 = int.Parse(s3);
+        // => s3 가 정수로 변경할수 없는 데이타 라면 
+        //    runtime error(예외)
+
+// 위 예제가 2개의 static method 를 사용하고 있습니다.
+// Console.ReadLine() : Console 클래스의 static method
+// int.Parse(s3)      : int 클래스의 static method
