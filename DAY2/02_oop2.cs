@@ -19,7 +19,20 @@ class Rect
     }
 }
 
+/*
 // 이제 사각형이 필요하면 사각형 타입 변수를 만듭니다.
 // => 사용자 정의  타입 변수를 만들때는 "new" 사용
 Rect rc = new Rect();
 int ret = rc.GetArea();
+*/
+
+// class 만드는 경우는 이제 "Top Level 방식" 안됩니다.
+// Main Method 만들어야 합니다
+class Program
+{
+    public static void Main()
+    {
+        Rect rc = new Rect();
+        int ret = rc.GetArea();
+    }
+}
