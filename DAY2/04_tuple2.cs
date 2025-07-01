@@ -33,10 +33,12 @@ t6.Item2 = 10;
 WriteLine($"{t6.Item1} {t6.Item2}"); // 1, 10
 
 
+// #4. Named Member => 중요
+(int,     int,     int)       t7 = (1,2,3); // unnamed tuple
+(int one, int two, int three) t8 = (1, 2, 3); // named tuple
 
+WriteLine($"{t7.Item2}"); // unnamed 는 이 방법만 가능
 
-
-// #3. Named Member
-(int,     int,     int)       v3 = (1,2,3); 
-
+WriteLine($"{t8.Item2}"); // named 는 이렇게 해도 되고
+WriteLine($"{t8.two}");   // 이렇게도 가능
 
