@@ -3,6 +3,8 @@
 // string        : immutable 한 문자열 타입
 // StringBuilder : mutable 한 문자열 타입. 
 
+using System.Text;
+
 string s = "ABCD";
 s[0] = 'X'; // error. immutable
 
