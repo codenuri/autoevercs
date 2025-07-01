@@ -23,6 +23,15 @@ int ret   = int.Max(10, 20); // "int" 는 변수이름이 아닌 타입이름
 // property 도 instance property , static property 가 있습니다.
 string s2 = "ABCD";
 
-WriteLine($"{s2.Length}");
-WriteLine($"{int.MaxValue}");
+WriteLine($"{s2.Length}");    // "ABCD" 의 길이이므로 4
+WriteLine($"{int.MaxValue}"); // int 타입이 가질수 있는 최대값
 WriteLine($"{int.MinValue}");
+
+// example : 정수 입력 받기
+
+// #1. 먼저 문자열로 입력 받은후
+string s3 = Console.ReadLine();
+
+// #2. 문자열을 정수로 변경해야 한다.
+// => int 관련 작업이므로
+int n3 = int.Parse(s3);
