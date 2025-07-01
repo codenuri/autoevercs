@@ -27,3 +27,5 @@ Console.WriteLine($"{s3 == s4}"); // true
 Console.WriteLine($"{object.ReferenceEquals(s1, s2)}"); // true
 Console.WriteLine($"{object.ReferenceEquals(s3, s4)}"); // false
 Console.WriteLine($"{object.ReferenceEquals(s1, s3)}"); // false
+
+// object.ReferenceEquals 은 상속 배운후.. 내일 자세히 등장
