@@ -6,7 +6,12 @@ class Bike
 
     public void SetGear(int value)
     {
-        gear = value;
+        // 인자의 유효성 여부를 확인해서
+        // 인자가 유효할때만 객체의 상태를 변경한다.
+        // "객체의 상태는 항상 유효한 값을 가지게 된다."
+
+        if( value > 0 && value < 20 )
+            gear = value;
     }
 }
 
