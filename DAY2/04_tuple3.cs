@@ -1,0 +1,41 @@
+using static System.Console;
+
+// #1. construction
+int a = 1, b = 2, c = 3;
+
+// 아래 코드는 a,b,c 3개의 변수로 t1 이라는 튜플을 생성(construction) 한것
+var t1 = (a, b, c);
+
+
+
+// #2. deconstruction
+int x, y, z;
+
+// 아래 코드는 t1이라는 tuple 의 값을 각각, x, y, z 에 담은것(deconstruction)
+x = t1.Item1;
+y = t1.Item2;
+z = t1.Item3;
+
+// 핵심 : 위 3줄을 아래 처럼 한줄로 할수 있습니다.
+(x, y, z) = t1; // 파이썬은 "x, y, z = t1" 이렇게
+
+
+// deconstruction 할때
+// => 변수를 선언후 해도 되고, 선언과 동시에 해도 됩니다.
+
+int a1, b1, c1;
+(a1, b1, c1) = t1;
+
+(int a2, int b2, int b3) = t1;
+
+
+
+
+
+
+
+
+// #3. 아래 2줄의 차이점은 ?
+(int a1, int a2, int a3) t2 = (1, 2, 3); 
+(int b1, int b2, int b3)    = (4, 5, 6); 
+
