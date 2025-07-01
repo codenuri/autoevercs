@@ -42,3 +42,10 @@ WriteLine($"{t7.Item2}"); // unnamed 는 이 방법만 가능
 WriteLine($"{t8.Item2}"); // named 는 이렇게 해도 되고
 WriteLine($"{t8.two}");   // 이렇게도 가능
 
+// #5. Named Member 를 만드는 2가지 방법
+// 1. 타입에 멤버 이름 지정
+// 2. 초기값에 멤버 이름 지정
+
+(int one, int two, int three) t10 = (1, 2, 3);
+
+var t11 = (one:1, two:2, three:3);
