@@ -6,11 +6,15 @@
 //     => 제어문 사용해서 값 유효성 조사 가능
 
 // #3. 원리!!!
-
+// => Property 를 컴파일 하면
+// => set_Age(), get_Age() 함수를 생성하게 됩니다.
+// => 결국 setter/getter 만드는 것과 동일
 
 class Person
 {
     private int age;
+
+
 
 
     public int Age
@@ -22,15 +26,23 @@ class Person
                 age = value;
         }
     }
-}
 
+    // 아래 처럼 사용자가 만들때
+    // => property 가 생성한 setter 와 이름이 충돌되어서
+    // => 에러입니다. 아래 부분 또는 위 set{} 부분에서 에러
+    public void set_Age(int value)
+    {
+
+    }
+}
 class Program
 {
     public static void Main()
     {
         Person p1 = new Person();
 
-        p1.Age = 10; 
-        int n = p1.Age; 
+        p1.Age = 10;    // 컴파일 되면 p1.set_Age(10)
+        int n = p1.Age; // int n = p1.get_Age()
+                        // 로 변경된것    
     }
 }
