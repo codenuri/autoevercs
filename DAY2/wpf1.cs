@@ -7,7 +7,7 @@
 // WPF 를 사용해 봅시다.
 // 1. TopLevel Program 은 안됨. Main Method 방식
 
-class wpf
+class Program
 {
     public static void Main()
     {
