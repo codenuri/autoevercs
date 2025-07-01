@@ -7,7 +7,11 @@ class Person
     public int Age
     {
         get { return age; }
-        set { age = value; }
+        set 
+        { 
+            if( age > 0 && age < 150)
+                age = value; 
+        }
     }
 }
 
@@ -17,7 +21,11 @@ class Program
     {
         Person p1 = new Person();
 
-        p1.Age = 10;
-        int n = p1.Age;
+        p1.Age = 10; // 쓰는 작업이므로 Age Property 의
+                     // set 부분이 호출됩니다.
+                     // 10 은 약속된 이름인 value 로 전달
+
+        int n = p1.Age; // 읽는 작업 이므로 Age Property 의 
+                        // get 부분이 호출됩니다.
     }
 }
