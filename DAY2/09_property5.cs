@@ -1,4 +1,4 @@
-﻿// 읽기 전용 property
+﻿// 읽기/쓰기 전용 property
 
 class Person
 {
@@ -16,7 +16,7 @@ class Program
     {
         Person p1 = new Person();
 
-        p1.Age = 10;
-        int n = p1.Age;
+        p1.Age = 10; // error
+        int n = p1.Age; // ok
     }
 }
