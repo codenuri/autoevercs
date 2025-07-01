@@ -30,8 +30,19 @@ Nullable<int> n4 = null;
 int? n5 = null;
 
 
-// #5. Nullable 원리
+// #5. Nullable 원리 - 55page n1, n2 그림 참고
 int n6 = 10;
+
 Nullable<int> n7 = null;
 Nullable<int> n8 = 10;
 
+
+/*
+// C# 내부
+struct Nullable<T>
+{
+    T value;       // T 타입의 값 한개 보관
+    bool hasValue; // 값이 있는지 없는지 관리
+
+}
+*/
