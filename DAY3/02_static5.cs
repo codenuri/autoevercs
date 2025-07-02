@@ -1,5 +1,13 @@
 ﻿using static System.Console;
 
+// field
+// instance field : 객체당 한개 생성
+// static   field : 모든 객체 공유. 오직 한개 생성
+
+// method
+// instance method : 객체이름.메소드() 로 호출, 객체가 있어야 호출가능
+// static   method : 클래스이름.메소드() 로 호출, 객체가 없어도 호출가능
+
 
 class Car
 {
