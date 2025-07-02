@@ -14,8 +14,12 @@ class Program
         // int.TryParse() : 성공/실패 여부가 반환값
         //                  성공시 결과는  2번째 인자에 담아 줍니다.
 
-        int ret;
-        bool b = int.TryParse("hello", out ret  );
+//      int ret;
+//      bool b = int.TryParse("hello", out ret  );
+
+
+        // 위 2줄을 한줄로 해보세요
+        bool b = int.TryParse("hello", out int ret);
 
         if ( b == false )
         {
