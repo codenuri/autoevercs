@@ -31,6 +31,10 @@ class Program
         // int m = 현재월 구하는 프로그램 코드;
         // int d = 현재일 구하는 프로그램 코드;
         Date today = new Date(y, m, d);
+
+
+        // 방법#3. "방법#2" 를 해주는 static method 가 있으면 어떨까 ?
+        Date today = Date.Today();
     }
 }
 
