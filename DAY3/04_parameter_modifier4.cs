@@ -3,9 +3,11 @@ using static System.Console;
 class MyUtil
 {
 	// Swap 만드세요
-	public static void Swap(?, ? )
+	public static void Swap(ref int a, ref int b )
 	{
-
+		int temp = a;
+		a = b;
+		b = temp;
 	}
 }
 
@@ -16,7 +18,7 @@ class Program
 		int x = 1;
 		int y = 2;
 
-        MyUtil.Swap( ?, ?); 
+        MyUtil.Swap( ref x, ref y ); 
 
 		// 아래 결과가 2, 1이 나오도록 Swap 을 만들어 보세요
 		WriteLine($"{x}, {y}");	// 2, 1
