@@ -27,6 +27,7 @@
                     // 컴파일 에러
     }
     // 참고) 아래처럼 만들고
+    // Program pg = new Program();
     // Program.SMethod2(pg);   이렇게 하는 기술도 있긴합니다
     public static void SMethod2(Program self)
     {
