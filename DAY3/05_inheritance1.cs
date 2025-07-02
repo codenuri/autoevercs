@@ -15,8 +15,8 @@ class Person
 // Java   : class Professor extends Person
 
 // 용어
-// Person  : Base class,    Super class,    Parent class
-// Student : Derived class, Sub class,      Child class
+// Person  : Base(기반) class,    Super class,    Parent class
+// Student : Derived(파생) class, Sub class,      Child class
 
 
 class Professor : Person
