@@ -10,7 +10,7 @@
 // => 단지, Square() 같은 메소드 만 제공하려고 만든것
 
 // 모든 메소드를 객체없이 호출 가능하도록 static 으로!!
-
+/*
 class Math
 {
     public static int Square(int x)
@@ -22,6 +22,17 @@ class Math
         return x * x;
     }
 }
+class Program
+{
+    public static void Main()
+    {
+        var ret1 = Math.Square(3);
+        var ret2 = Math.Square(3.3);
+    }
+}
+*/
+
+// 이미 C# 표준에 Math 클래스 있습니다.(Java 에도..)
 class Program
 {
     public static void Main()
