@@ -37,6 +37,9 @@ class Date
     {
         Date temp = new Date(year, month, day + ds);
 
+        // 위 구현은 잘못된 구현입니다.
+        // 복습할때, days[] 배열을 참고해서 제대로 구현해 보세요
+
         return temp;
     }
 }
