@@ -37,7 +37,7 @@ class Program
 {
     public static void Main()
     {
-        var ret1 = Math.Square(3);
-        var ret2 = Math.Square(3.3);
+        var ret1 = Math.Sqrt(2);
+        var ret2 = Math.Sqrt(3.3);
     }
 }
