@@ -6,6 +6,10 @@ class MyMath
     {
         ++x;
     }
+    public static void Inc2(ref int x) // Inc2(int* x)
+    {
+        ++x;
+    }
 }
 
 class Program
@@ -15,8 +19,9 @@ class Program
         int n1 = 0;
         int n2 = 0;
 
-        MyMath.Inc1(n1); 
+        MyMath.Inc1(n1);
+        MyMath.Inc2(ref n2); // C 언어 Inc2(&n2)
 
-        WriteLine($"{n1}");
+        WriteLine($"{n1} {n2}"); // 0, 1
     }
 }
