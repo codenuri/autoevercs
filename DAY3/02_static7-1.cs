@@ -62,5 +62,30 @@ class Program
 
         // 방법 #2. 객체없이 호출가능하게, 인자로 7월 전달
         int ds = Date.HowManyDays(7);
+
+        //------------------------
+        // 특정 날짜의 내일 날짜를 구하는 Tomorrow() 를 만들려고 합니다.
+        // => instance method 로 할까요 ? static method 로 할까요 ?
+        // => 2025/7/2 의 내일
+
+        Date today = new Date(2025, 7, 2);
+
+        // 방법 #1. 객체가 이미 존재 할때 해당 객체의 내일을 구하기 위해
+        // 아래 처럼 사용하게 하자.
+        Date to = Date.Tomorrow(today.Year, today.Month, today.Day);
+
+
+        // 방법 #2. 내일이라는 개념은 "기준날짜" 가 필요하다.
+        // => instatnce method 로 하자
+        Date to = today.Tomorrow();
+
+        // method 내부에서 field 의 모든 정보를 사용해야 한다.
+        // => instance method
+        
+        // method 내부에서 field 접근할 필요 없다.
+        // => static method
+
+        // 위 Tomorrow() 는 instance() 가 좋습니다.
+        // => 복습할때 만들어 보세요
     }
 }
