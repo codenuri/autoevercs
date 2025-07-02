@@ -3,7 +3,13 @@
 // GUI 라이브러리를 설계해 봅시다.
 class Window
 {
-    List<Button> child_list = new List<Button>();
+//  List<Button> child_list = new List<Button>(); // 버튼 밖에 보관할수 없다
+
+//  List<object> child_list = new List<object>(); // 모든 객체를 보관할수 있다.
+                                                // int 도 보관된다. ???
+                                                // 자식윈도우는 UI 만 허용해야 한다.
+
+
 
     public void AddChild(Button btn)
     {
@@ -11,10 +17,21 @@ class Window
     }
 }
 
-class Button 
+// 모든 컨트롤은 묶어서 관리 가능해야 합니다.
+// => 하나의 저장소에 모든 종류 컨트롤을 보관
+// => 기반 클래스를 설계 합니다.
+// => "상속" 은 요소를 물려 받기도 하지만,
+//    여러 타입을 묶을때 도 사용합니다.
+
+class UIElement
+{
+    // 모든 UI의 공통의 특징을 설계
+}
+
+class Button : UIElement
 { 
 }
-class TextBox
+class TextBox : UIElement
 {
 }
 
