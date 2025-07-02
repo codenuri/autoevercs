@@ -14,10 +14,11 @@ class Program
         // 다른 개발자가 이코드를 읽을때
         // 인자의 의미가 명확하지 않을수 있습니다
         // 3번째 인자의 의미가 뭘까 ? width ? x2
-        rc.Set(1, 1, 10, 10);
+
+        rc.Set(1, 1, 10, 10);  // positional argument
 
         // 아래 처럼 코딩해 놓으면 어떨까요 ?
-        rc.Set(x:1, y:1, width:10, height:10);
+        rc.Set(x:1, y:1, width:10, height:10); // named argument
 
         // 일부만 표기도 가능
         rc.Set(1, 1, width: 10, height: 10);
@@ -25,5 +26,9 @@ class Program
         // 이름이 있으면 순서 변경도 가능
         rc.Set(1, 1, height: 10, width: 10);
 
+        // named argument 개념이 좋은데, 지원하는 언어가 많지 않습니다.
+        // => Objective-C, swift, C# 정도..
+
+        // C/C++/Java/Python 은 안됨
     }
 }
