@@ -1,6 +1,12 @@
 ﻿using static System.Console;
 
-// 방법 #2
+// 방법 #2. static field 사용 - 성공
+
+// 이소스의 핵심 : static field 특징
+// 1. 객체가 없어도 메모리에 존재
+// 2. 객체 생성시 객체 메모리 공간에는 포함 안됨
+// 3. 오직 한개만 존재하고 모든 객체가 공유
+// => 모든 자동차 객체가 공통으로 사용할 데이타 만들때 사용
 
 
 class Car
@@ -37,3 +43,5 @@ class Program
         WriteLine($"{Car.cnt}"); 
     }
 }
+
+
