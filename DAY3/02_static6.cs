@@ -18,13 +18,13 @@ class Date
     {
         get { return month; }
         set 
-        { 
-            if (value < 0 || value > 12) 
-                return; 
+        {
+            if (value < 1 || value > 12)
+                throw new Exception(); // 예외 발생.
+
             month = value; 
         }
     }
-
 }
 
 class Program
@@ -32,5 +32,8 @@ class Program
     public static void Main()
     {
         Date d1 = new Date();
+
+        d1.Month = 1; // ok.. 유효한값
+        d1.Month = 20; // runtime error. 예외 발생
     }
 }
