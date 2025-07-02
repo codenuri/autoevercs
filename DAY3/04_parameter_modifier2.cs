@@ -26,6 +26,10 @@ class Program
 
         int ret2 = AddSub(5, 3, out ret1);  // ???
 
-        WriteLine($"{ret1}, {ret2}"); 
+        WriteLine($"{ret1}, {ret2}");
+
+        // out parameter 의 경우는 인자 호출시 변수 를 생성해도 됩니다.
+        // ref 는 안됨
+        int ret3 = AddSub(5, 3, out int ret4); // 이순간 ret4 생성
     }
 }
