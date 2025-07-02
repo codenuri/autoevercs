@@ -26,6 +26,8 @@ class Program
 {
     public static void Main()
     {
+        // 이제 사용자는 아래 처럼 사용하게 됩니다.
+        // C++/Java/Swift 등에서도 아주 널리 사용됩니다.
         Date today = Date.Today();
     }
 }
