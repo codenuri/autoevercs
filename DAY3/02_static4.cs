@@ -1,5 +1,8 @@
 ﻿using static System.Console;
 
+// C전역변수 : 언제 어디서도 접근 가능합니다.
+// static field : private 으로 만들면
+//                Car 메소드만 접근 가능.(안전!!)
 
 class Car
 {
