@@ -21,9 +21,12 @@ class Point
         // => 이 코드는 지역변수가 아닌 필드 이다. 라고 명확히 할수 있습니다.
         // => 가독성 높은 좋은 코드
     }
-
+    // 메소드가 this 를 반환하면 메소드 호출을 연속적으로 할수 있습니다.
+    // => java 언어의 "빌더 패턴" 기술이 이 문법 사용
     public Point Foo()
     {
+        // 메소드 안에서 this : Foo 를 호출할때 사용한 객체
+        //                      즉, Main 메소드에서 만든 "객체 p"
         return this;
     }
 }
@@ -35,6 +38,7 @@ class Program
         Point p = new Point();
         p.Set(1, 2);
 
-        p.Foo();
+        p.Foo().Foo().Foo().Foo();
+        // p
     }
 }
