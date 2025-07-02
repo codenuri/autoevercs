@@ -9,14 +9,15 @@
 // => 핵심은 데이타(필드)가 없습니다.
 // => 단지, Square() 같은 메소드 만 제공하려고 만든것
 
+// 모든 메소드를 객체없이 호출 가능하도록 static 으로!!
 
 class Math
 {
-    public int Square(int x)
+    public static int Square(int x)
     {
         return x * x;
     }
-    public double Square(double x)
+    public static double Square(double x)
     {
         return x * x;
     }
@@ -25,9 +26,7 @@ class Program
 {
     public static void Main()
     {
-        Math m = new Math();
-
-        var ret1 = m.Square(3);
-        var ret2 = m.Square(3.3);
+        var ret1 = Math.Square(3);
+        var ret2 = Math.Square(3.3);
     }
 }
