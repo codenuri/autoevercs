@@ -31,5 +31,10 @@ class Program
         // out parameter 의 경우는 인자 호출시 변수 를 생성해도 됩니다.
         // ref 는 안됨
         int ret3 = AddSub(5, 3, out int ret4); // 이순간 ret4 생성
+
+        // 위 코드는 아래 2줄에 대한 단축 코드
+//      int ret4;
+//      int ret3 = AddSub(5, 3, out ret4);
+
     }
 }
