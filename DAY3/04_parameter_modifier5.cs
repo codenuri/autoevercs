@@ -11,10 +11,15 @@ class Program
 
 
         // int.Parse() : 실패시 예외 발생, 처리하지 않으면 비정상종료
-        // int.TryParse() : 성공한 결과한 결과는 반환값으로
-        //                  성공/실패 여부는 2번째 인자에 담아 줍니다.
+        // int.TryParse() : 성공/실패 여부가 반환값
+        //                  성공시 결과는  2번째 인자에 담아 줍니다.
 
-        bool b = false;
-        int n3 = int.TryParse("Hello", ?? b  );
+        int ret;
+        bool b = int.TryParse("hello", out ret  );
+
+        if ( b == false )
+        {
+            // 실패 처리
+        }
     }
 }
