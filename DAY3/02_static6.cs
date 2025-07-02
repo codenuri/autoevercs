@@ -14,6 +14,7 @@ class Date
 
     // #2. setter/getter..
     // => C# 은 property 권장
+    // => 복습할때 아래 코드 참고 해서 Year, Day 만들어 보세요
     public int Month
     {
         get { return month; }
@@ -25,15 +26,22 @@ class Date
             month = value; 
         }
     }
+
+    // #3. 생성자를 만들어서 필드 초기화
+    // => 항상 필수!!!
+    public Date(int y, int m, int d)
+    {
+        (year, month, day) = (y, m, d);
+    }
 }
 
 class Program
 {
     public static void Main()
     {
-        Date d1 = new Date();
+        Date d1 = new Date(2025, 7, 2);
 
         d1.Month = 1; // ok.. 유효한값
-        d1.Month = 20; // runtime error. 예외 발생
+//      d1.Month = 20; // runtime error. 예외 발생
     }
 }
