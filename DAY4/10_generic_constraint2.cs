@@ -28,6 +28,12 @@ class Program
     {
         WriteLine($"{Max(10, 20)}");
         WriteLine($"{Max("AAA", "CC")}");
+
+
+        Point p1 = new Point(0,0);
+        Point p2 = new Point(1,0);
+
+        Max(p1, p2);
     }
 
 }
