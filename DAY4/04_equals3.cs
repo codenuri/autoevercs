@@ -46,3 +46,4 @@ class Program
 //    (Button 같은 클래스가 Equals() 를 override 해 놓았다는 것)
 
 // value type 은 == 자체가 상태 조사
+// => 동일 객체라는 개념이 없습니다.
