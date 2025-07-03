@@ -13,7 +13,18 @@ class Label : IComparable
 	
 	public Label(string s) => title = s;
 
+
+    public int CompareTo(object? obj)
+    {
+		Label other = (Label)obj;
+
+		// Label 의 title 필드 자체는 string 인데
+		// string 자체는 CompareTo 가능..
+		return title.CompareTo(other.title);
+    }
 }
+
+
 
 class Program 
 {
