@@ -18,5 +18,22 @@ class Program
         string s1 = n.ToString(); // "10"
         string s2 = d.ToString(); // "3.4"
 
+        Console.WriteLine(n);
+        
     }
 }
+/*
+class Console
+{
+    public static void WriteLine( int data)
+    {
+        string s = data.ToString();
+        // 이제 화면 출력하는 내부 함수로 s 출력
+    }
+}
+*/
+
+
+
+
+
