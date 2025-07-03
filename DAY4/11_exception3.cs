@@ -10,8 +10,6 @@ class DBBackupException : Exception
 
     public DBBackupException(string s) => message = s;
 }
-
-
 // #2. 메소드가 실패하면 예외 객체를 던지세요(throw)
 
 
@@ -21,6 +19,9 @@ class Database
 
     public bool Backup()
     {
+        // if(실패시)
+        throw new DBBackupException("접근권한없음");
+
         return false;
     }
     public void Remove() => WriteLine("Remove DB");
