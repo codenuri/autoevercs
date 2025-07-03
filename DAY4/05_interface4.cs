@@ -15,32 +15,22 @@ interface ICamera
 // 사용하는 코드를 먼저 만들수 있습니다.
 // 규칙 대로만 사용하면 됩니다.
 
+class Person
+{
+    public void UseCamera(ICamera c) { c.Take(); }
+}
 
-
-
-
-
-
-
-
-
-
-
-class Camera
+// 이제 모든 카메라 제조사는 규칙을 지켜야 합니다.
+class Camera : ICamera
 {
     public void Take() { WriteLine("take picture"); }
 }
 
-class HDCamera
+class HDCamera : ICamera
 {
     public void Take() { WriteLine("take HD picture"); }
 }
 
-class Person
-{
-    public void UseCamera(Camera c) { c.Take(); }
-    public void UseCamera(HDCamera c) { c.Take(); }
-}
 
 class Program
 {
