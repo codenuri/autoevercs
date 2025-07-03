@@ -39,9 +39,9 @@ class Program
                     {
                         r.Draw();
                     }
-                    else if ( s is Circle c )
+                    else if ( s is Circle ci )
                     {
-                        c.Draw();
+                        ci.Draw();
                     }
                 }
             }
