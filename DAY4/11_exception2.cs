@@ -11,7 +11,8 @@ class Database
     public bool Backup()
     {
         // 심각한 오류를 보고 하지 않고 여기서 프로세스 종료
-//      Process.Exit(-1); 
+        Process p = Process.GetCurrentProcess();
+        p.Kill();
 
         return false; 
     }
