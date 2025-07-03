@@ -31,6 +31,11 @@ class HDCamera : ICamera
     public void Take() { WriteLine("take HD picture"); }
 }
 
+class UHDCamera : ICamera
+{
+    public void Take() { WriteLine("take UHD picture"); }
+}
+
 
 class Program
 {
@@ -42,8 +47,10 @@ class Program
 
 
         HDCamera hc = new HDCamera();
+        p.UseCamera(hc); 
 
-        p.UseCamera(hc); // ???
+        UHDCamera uhc = new UHDCamera();
+        p.UseCamera(uhc); 
 
     }
 }
