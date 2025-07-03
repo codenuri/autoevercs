@@ -18,11 +18,14 @@ class Program
 
         t.IMethod(1);    // instance method는 객체이름으로 호출
         Test.SMethod(1); // static method는 클래스 이름으로 호출
-        
+
 
         // Test 의 SMethod 와 IMethod 를 각각 f1, f2 등록해 보세요
-        MyFunc f1 = ?;  
-        MyFunc f2 = ?;  
+        // static   method : 클래스이름.메소드이름 로 등록
+        // instance method : 객체 이름.메소드이름 로 등록
+        // => 즉, 호출하는 모양에서 ()만 제거.
+        MyFunc f1 = Test.SMethod; // ?  
+        MyFunc f2 = t.IMethod;  
 
 
         f1(10);  // Test SMethod 호출
