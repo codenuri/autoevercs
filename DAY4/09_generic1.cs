@@ -27,14 +27,23 @@
         a = b;
         b = tmp;
     }
-
-
     public static void Main()
     {
         int n1 = 10,  n2 = 20;
         double d1 = 1.1, d2 = 2.3;
                 
-        Swap(ref n1, ref n2);
-        Swap(ref d1, ref d2);
+        // #1. generic method 를 사용하는 정확한 방법
+        Swap<int>(ref n1, ref n2);  // 1. 틀을 사용해서 int Swap(int, int) 함수 생성
+                                    // 2. 이 위치는 call Swap(int, int) 의 의미 기계어
+
+        Swap<double>(ref d1, ref d2);// 1. 틀을 사용해서 double Swap(double, double) 함수 생성
+                                     // 2. 이 위치는 call Swap(double, double) 의 의미 기계어
+
+        // #2. 타입 인자를 생략하면 인자의 타입을 보고 컴파일러가 추론
+        Swap(ref n1, ref n2); // n1 을 보고 T = int 라고 추론
+        Swap(ref d1, ref d1); // d1 을 보고 T = double 라고 추론
+
+        // 그래서 실전에서는 #2 사용(간결하니까)
+
     }
 }
