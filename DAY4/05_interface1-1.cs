@@ -26,7 +26,7 @@ interface IComparable
 //                         구현해라(CompareTo 구현 제공하라는 것)
 
 // 그리고 int 타입 만들때 아래 처럼..
-class Int32 : IComparable
+struct Int32 : IComparable
 {
     // CompareTo() 구현 제공
 }
