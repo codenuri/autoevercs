@@ -16,8 +16,6 @@ class Point
     }
 }
 
-
-
 class Program
 {
     public static void Main()
@@ -40,3 +38,11 @@ class Program
         Console.WriteLine($"{p3.Equals(p4)}");
     }
 }
+
+// 핵심 C# 의 다양한 라이브러리(WPF, Window, Button 등) 사용시
+// reference type 은 대부분
+// 1. == 로 조사하면 "동일한 객체"인가를 조사
+// 2. 상태 조사하면 Equals() 사용하세요
+//    (Button 같은 클래스가 Equals() 를 override 해 놓았다는 것)
+
+// value type 은 == 자체가 상태 조사
