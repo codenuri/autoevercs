@@ -8,23 +8,25 @@
 //    => 디자인 원칙
 //    => 그래야 Shape 참조로 Draw() 호출이 가능해 진다.
 
-
+// 2. 기반 클래스 설계시, 파생 클래스에서 override 하게 되는 메소드는 
+//    반드시 virtual 이어야 한다.
+//    => Draw() 는 모든 도형이 다시 만들게 된다. "virtual" 로
 
 
 class Shape
 {
     public int color = 0;
 
-    public void Draw() { WriteLine("Draw Shape"); }
+    public virtual void Draw() { WriteLine("Draw Shape"); }
 }
 
 class Rect : Shape
 {
-    public void Draw() { WriteLine("Draw Rect"); }
+    public override void Draw() { WriteLine("Draw Rect"); }
 }
 class Circle : Shape
 {
-    public void Draw() { WriteLine("Draw Circle"); }
+    public override void Draw() { WriteLine("Draw Circle"); }
 }
 
 class Triangle : Shape
