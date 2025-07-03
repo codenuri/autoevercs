@@ -1,5 +1,8 @@
 using static System.Console;
 
+
+
+
 // 사용자 정의 타입에 대해서 CompareTo 를 제공하려면
 // => 그냥 구현만 제공해도 되지만..
 
@@ -42,3 +45,9 @@ class Program
     }
 }
 
+
+// 참고
+// C++ : 다중 상속 가능
+// C#/Java/Python : 다중 상속 안됨. 다중 인터페이스 상속가능
+
+// Rust : 상속 문법없음(Traits 라는 독특한 기술 사용)
