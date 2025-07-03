@@ -27,7 +27,7 @@ class Program
         Console.WriteLine($"{p3 == p4}"); // False
 
         // #2. Equals() 메소드
-        // => 
+        // => object 클래스의 기본 구현은 "동일한 객체"인가 조사
         Console.WriteLine($"{p1.Equals(p2)}");
         Console.WriteLine($"{p3.Equals(p4)}");
     }
