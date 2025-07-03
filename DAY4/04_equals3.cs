@@ -5,7 +5,18 @@ class Point
     private int x = 0;
     private int y = 0;
     public Point(int a, int b) => (x, y) = (a, b);
+
+    // object 의 Equals 기본 구현은 "객체의 동일성" 조사인데
+    // override 해서 "상태의 동일성" 조사로 변경합니다.
+    public override bool Equals(object? obj)
+    {
+        Point pt = (Point)obj;       
+
+        return x == pt.x && y == pt.y;
+    }
 }
+
+
 
 class Program
 {
