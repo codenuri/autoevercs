@@ -2,8 +2,8 @@
 
 class Point<T>
 {
-    private T x = 0;
-    private T y = 0;
+    private T x = default;
+    private T y = default;
 
     public Point(T a, T b)
     {
