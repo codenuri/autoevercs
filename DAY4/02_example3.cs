@@ -1,5 +1,7 @@
 ﻿using static System.Console;
 
+// 핵심 #3. 아래 코드가 에러 나오는 이유 => 해결책은 다음 소스
+
 class Shape
 {
     public int color = 0;
@@ -28,12 +30,16 @@ class Program
             else if (cmd == 2) { c.Add(new Circle()); }
             else if (cmd == 9)
             {
-                foreach (var s in c)
+                foreach (var s in c) // A
                 {
-                    s.Draw();
+                    s.Draw(); // error. B
                 }
             }
         }
     }
 }
 // 위 코드는 어디서 ? 왜 에러일까요 ?
+// => A 에서 s 의 타입은 Shape 이다.
+// => Rect, Circle 에는 Draw 가 있지만
+// => 기반 클래스인 Shape 에는 Draw 가 없다.
+// => 기반 클래스 참조로는 "파생 클래스 고유 멤버에 접근 안됨"
