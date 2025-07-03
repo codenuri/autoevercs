@@ -12,17 +12,16 @@ class Program
 
         Window w = new Window();
 
-        w.MouseLeftButtonDown += OnLeftDown;
-
+        w.MouseRightButtonDown += OnRightDown;
 
         w.Show();
 
         app.Run();
     }
 
-    private static void OnLeftDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    private static void OnRightDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-        Console.WriteLine("LButtonDown");
+        MessageBox.Show("RIGHT DOWN");
     }
 }
 
