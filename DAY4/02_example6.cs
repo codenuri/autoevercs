@@ -54,6 +54,8 @@ class Shape
 class Rect : Shape
 {
     public override void Draw() { WriteLine("Draw Rect"); }
+
+    
 }
 class Circle : Shape
 {
