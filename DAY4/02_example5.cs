@@ -31,7 +31,7 @@ class Circle : Shape
 
 class Triangle : Shape
 {
-    public void Draw() { WriteLine("Draw Triangle"); }
+    public override void Draw() { WriteLine("Draw Triangle"); }
 }
 
 
@@ -51,7 +51,16 @@ class Program
             {
                 foreach (Shape s in c)
                 {
-                    s.Draw();
+                    s.Draw();   // 다형성(polymorphism)
+                                // => 동일한 코드가 상황(실제 객체의 종류)에 따라
+                                // => 다르게 동작(다른 함수 호출)하는것
+
+                    // 객체지향 프로그래밍 3대 특징 : 캡슐화, 상속, 다형성
+
+                    // 다형성이 왜 중요하고, 어떤점이 좋은가요 ?
+                    // => 새로운 도형(Triangle)이 추가되어도
+                    // => "s.Draw()" 는 변경되지 않는다.
+                    // => OCP 만족하는 좋은 코드.. 
                 }
             }
         }
