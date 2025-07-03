@@ -29,8 +29,8 @@ class Program
     {
 		Animal ad = new Dog();
 
-		ad.Cry1();  // ?
-        ad.Cry2();  // ?
+		ad.Cry1();  // Animal Cry1
+        ad.Cry2();  // Dog Cry2
     }
 }
 
