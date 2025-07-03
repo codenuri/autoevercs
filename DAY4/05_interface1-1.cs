@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System.Drawing;
+using static System.Console;
 
 // 언제 추상클래스를 사용하고, 언제 인터페이스를 사용하나요 ?
 
@@ -50,6 +51,14 @@ class Program
         int ret1 = n1.CompareTo(n2); 
         int ret2 = s1.CompareTo(s2);
 
+        // 메소드이름이 인터페이스로 약속되었기 때문에
+        // 해당 인터페이스를 구현한 것만 별도로 처리하는 메소드를
+        // 만들수도 있습니다.
+        M1(n1); // ok
+        M1(s1); // ok
+
+//      Point p = new Point(); // equals 에 있는 클래스 복사
+//      M1(p);  // error. IComparable 을 구현하지 않았습니다.
     }
 
 
