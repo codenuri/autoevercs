@@ -22,6 +22,8 @@ class Program
         Button btn1 = new Button();
 
         btn1.Click = Foo;
+        btn1.Click += Goo;
+        btn1.Click += Hoo;
 
 
         btn1.UserPressButton();
