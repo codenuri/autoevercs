@@ -34,7 +34,11 @@ class Program
 
         // 아래 코드는 어떤 메소드를 호출할까요 ?
         // => 어떤 메소드를 호출하는게 논리적으로 맞을까요 ?
+        //    객체 자체는 "Dog" 이므로 논리적으로는 Dog가 맞습니다.
         ad.Cry(); // ?
+
+        // java, python, swift 등의 대부분의 객체지향언어 : Dog Cry 호출
+        // C++/C# : Animal Cry
 	}
 }
 
