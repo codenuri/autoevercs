@@ -2,11 +2,20 @@ using System;
 using static System.Console;
 
 
-class Point
+class Point : IComparable 
 {
     public int X { set; get; } = 0;
     public int Y { set; get; } = 0;
     public Point(int x, int y) => (X, Y) = (x, y);
+
+    public int CompareTo(object? obj)
+    {
+        Point other = (Point)obj;
+
+        // 아래 구현은 x 로만 비교
+
+        return X.CompareTo(other.X);
+    }
 }
 
 
@@ -33,7 +42,7 @@ class Program
         Point p1 = new Point(0,0);
         Point p2 = new Point(1,0);
 
-        Max(p1, p2);
+        Max(p1, p2); // IComparable 구현했으므로 에러 아님.
     }
 
 }
