@@ -12,8 +12,9 @@ class Program
 	{	
 		// 핵심 : +=을 사용하면 2개이상의 메소드 등록가능합니다
 		MyFunc f = Test.SMethod; 
-		MyFunc f += Program.SMethod;
+		f += Program.SMethod;
 
+		
 		f(10); // 2개 호출
 
 		f -= Test.SMethod; // 제거도 가능
