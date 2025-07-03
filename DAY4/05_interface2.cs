@@ -7,7 +7,7 @@ using static System.Console;
 // 1. IComparable 로 부터 상속 받으세요
 // 2. 규칙인 "CompareTo" 구현하세요
 
-class Label : IComparable
+class Label :  IComparable
 {
 	private string title;
 	
