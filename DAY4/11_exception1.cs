@@ -26,7 +26,12 @@ class Program
     {
         Database db = new Database("product.db");
 
-        db.Backup();    
+        bool ret = db.Backup();    
+
+        if ( ret == false )
+        {
+            // 오류 처리.!!
+        }
 
         db.Remove();
     }
