@@ -1,6 +1,12 @@
 using System;
 using static System.Console;
 
+// delegate 란 ?
+// => 함수의 호출 정보(함수가 있는 메모리 주소등)을 보관했다가
+// => 해당함수를 호출할때 사용
+// => C 언어의 함수 포인터!
+
+
 // delegate 만드는 법
 // 1. 함수 선언만 복사
 // 2. 앞에 delegate 추가
@@ -23,6 +29,9 @@ class Program
         MyFunc f = Foo; // 메소드(함수)를 보관하기 위한 타입
                         // 주의 : 이렇게해야 Foo() 호출
                         //        Foo 는 메소드 이름
+
+        f(10); // Foo(10)와 동일, 즉, 저장된 함수 호출
+
     }
 
 
