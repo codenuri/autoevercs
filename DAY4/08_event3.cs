@@ -23,8 +23,11 @@ class Program
 
         btn1.Click = Foo;
         btn1.Click += Goo;
-        btn1.Click += Hoo;
 
+        btn1.Click = Hoo; // += 하려고 했는데, 실수로 =을 했다
+                        // 이전에 등록된 메소드가 제거된다.!
+                        // 버그 !!    
+                        // 해결책은 event4.cs
 
         btn1.UserPressButton();
     }
