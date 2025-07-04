@@ -12,7 +12,7 @@
         <Button Content="Shuffle" Width="300" FontSize="20"
                 DockPanel.Dock="Top"/>
 
-        <Grid Name="grid">
+        <Grid Name="grid" DockPanel.Dock="Bottom">
             
         </Grid>
 
