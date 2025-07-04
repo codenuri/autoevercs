@@ -19,6 +19,20 @@ namespace PuzzleGame
     /// </summary>
     public partial class PuzzleWindow : Window
     {
+        private const int CNT = 5;     // 5 * 5. 이 상수만 변경하면 7*7 도 가능
+        private const int EMPTY = CNT * CNT - 1;
+
+        // #1. grid Row, Col 초기화
+        public void InitGrid()
+        {
+            for (int i = 0; i < CNT; i++)
+            {
+                grid.RowDefinitions.Add(new RowDefinition());
+                grid.ColumnDefinitions.Add(new ColumnDefinition());
+            }
+        }
+
+
         public PuzzleWindow()
         {
             InitializeComponent();
