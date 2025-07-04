@@ -30,15 +30,16 @@ namespace SKETCH
                                                 MouseButtonEventArgs e)
         {
             // 마우스 누를 곳의 좌표를 from 에 기록
-            from = e.GetPosition(this);
-               
+            // from = e.GetPosition(this); // window 기준 좌표
+            from = e.GetPosition(canvas);  // canvas 기준 좌표
+
         }
 
         private void canvas_MouseMove(object sender, MouseEventArgs e)
         {
             if ( e.LeftButton == MouseButtonState.Pressed )
             {
-                Point to = e.GetPosition(this);
+                Point to = e.GetPosition(canvas);
 
                 // WPF 객체지향이 잘되어 있습니다
                 Line line = new Line();
@@ -47,12 +48,19 @@ namespace SKETCH
                 line.X1 = from.X;
                 line.Y1 = from.Y;
                 line.X2 = to.X;
-                line.Y2 = to.X;
+                line.Y2 = to.Y;
 
                 // canvas layout 에 선을 붙이면 됩니다.
                 canvas.Children.Add(line);
 
+                // 현재 점이 다시 시작으로
+                from = to;
             }
+        }
+
+        private void canvas_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            canvas.Children.Clear();
         }
     }
 }

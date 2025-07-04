@@ -13,7 +13,8 @@
         
         <Canvas DockPanel.Dock="Bottom"   Name="canvas" Background="Yellow" 
                 MouseLeftButtonDown="canvas_MouseLeftButtonDown"
-                MouseMove="canvas_MouseMove">
+                MouseMove="canvas_MouseMove"
+                MouseRightButtonDown="canvas_MouseRightButtonDown">
             
         </Canvas>
         
