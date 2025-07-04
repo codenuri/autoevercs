@@ -9,7 +9,10 @@ class MainWindow : Window
 {
     public MainWindow()
     {
-        
+        Button btn1 = new Button { Content = "button1" };
+        Button btn2 = new Button { Content = "button2" };
+        Button btn3 = new Button { Content = "button3" };
+        Button btn4 = new Button { Content = "button4" };
 
     }
 }
