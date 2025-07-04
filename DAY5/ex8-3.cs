@@ -22,7 +22,44 @@ class MainWindow : Window
 
         this.Content = grid;
 
+        // #2. Grid 의 row, coloum 지정하기
+        // => 아래 처럼하지 않습니다.
+        // => 아래 처럼하게 되면, 각 row 의 크기 등을 관리할수 없습니다.
+        // grid.Row = 3;
+        // grid.Column = 3;
 
+        // Row, Column 자체가 하나의 객체입니다.
+        RowDefinition r1 = new RowDefinition();
+        RowDefinition r2 = new RowDefinition();
+        RowDefinition r3 = new RowDefinition();
+    
+        ColumnDefinition c1 = new ColumnDefinition();
+        ColumnDefinition c2 = new ColumnDefinition();
+        ColumnDefinition c3 = new ColumnDefinition();
+
+        grid.RowDefinitions.Add(r1);
+        grid.RowDefinitions.Add(r2);
+        grid.RowDefinitions.Add(r3);
+
+        grid.ColumnDefinitions.Add(c1);
+        grid.ColumnDefinitions.Add(c2);
+        grid.ColumnDefinitions.Add(c3);
+
+
+        // #3. 각 자식 컨트롤이 Grid의 어느 위치에 놓일지 설정
+        // => 역시 독특한 방법입니다.
+
+        Grid.SetRow(btn1, 0);
+        Grid.SetColumn(btn1, 0);
+
+        Grid.SetRow(btn2, 0);
+        Grid.SetColumn(btn2, 2);
+
+        Grid.SetRow(btn3, 1);
+        Grid.SetColumn(btn3, 2);
+
+        Grid.SetRow(btn4, 2);
+        Grid.SetColumn(btn4, 2);
 
 
         // #4. 자식컨트롤을 grid 에 추가
@@ -30,11 +67,6 @@ class MainWindow : Window
         grid.Children.Add(btn2);
         grid.Children.Add(btn3);
         grid.Children.Add(btn4);
-
-
-
-
-
     }
 }
 
