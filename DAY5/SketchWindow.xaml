@@ -6,16 +6,18 @@
         xmlns:local="clr-namespace:SKETCH"
         mc:Ignorable="d"
         Title="SketchWindow" Height="450" Width="800">
-
-    <StackPanel>
-        <Label Content="서명해주세요" FontSize="20"/>
+        
+    <DockPanel>
+        <Label DockPanel.Dock="Top" Content="서명해주세요" FontSize="20"/>
 
         
-        <Canvas Name="canvas">
+        <Canvas DockPanel.Dock="Bottom"   Name="canvas" Background="Yellow" 
+                MouseLeftButtonDown="canvas_MouseLeftButtonDown"
+                MouseMove="canvas_MouseMove">
             
         </Canvas>
         
-    </StackPanel>
+    </DockPanel>
     
     
     

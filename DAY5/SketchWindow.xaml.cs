@@ -23,5 +23,20 @@ namespace SKETCH
         {
             InitializeComponent();
         }
+
+        private Point from = new Point(0, 0);
+
+        private void canvas_MouseLeftButtonDown(object sender,  
+                                                MouseButtonEventArgs e)
+        {
+            // 마우스 누를 곳의 좌표를 from 에 기록
+            from = e.GetPosition(this);
+               
+        }
+
+        private void canvas_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
