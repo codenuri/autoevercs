@@ -50,29 +50,40 @@ namespace PuzzleGame
             block_height = bitmap.Height / CNT;
 
             //---------------------------
-            // 3. Bitmap 에서 1번째 블럭만 잘라내기
 
-            int num = 7;
-            int bx = num % CNT; // 2 <== x
-            int by = num / CNT; // 1 <== Y
+            for (int y = 0; y < CNT; y++)
+            {
+                for (int x = 0; x < CNT; x++)
+                {
+                    // 3. Bitmap 에서 1번째 블럭만 잘라내기
+                    int num = y * CNT + x;
 
-            CroppedBitmap cb = new CroppedBitmap(bitmap,
-                           new Int32Rect((int)(bx * block_width), 
-                                         (int)(by * block_height), 
-                                         (int)block_width, 
-                                         (int)block_height));
+                    int bx = num % CNT; // 2 <== x
+                    int by = num / CNT; // 1 <== Y
 
-            // 4. 한블럭의 bitmap 으로 Image 객체 만들기
-            Image img = new Image();
-            img.Source = cb;
+                    CroppedBitmap cb = new CroppedBitmap(bitmap,
+                                   new Int32Rect((int)(bx * block_width),
+                                                 (int)(by * block_height),
+                                                 (int)block_width,
+                                                 (int)block_height));
+
+                    // 4. 한블럭의 bitmap 으로 Image 객체 만들기
+                    Image img = new Image();
+                    img.Source = cb;
+                    img.Stretch = Stretch.Fill;
+                    img.Margin = new Thickness(0.5);
 
 
+                    Grid.SetRow(img, y);
+                    Grid.SetColumn(img, x);
+
+                    grid.Children.Add(img);
+
+                }
+            }
 
 
-            Grid.SetRow(img, 0);
-            Grid.SetColumn(img, 0);
-
-            grid.Children.Add(img);            
+          
         }
 
            
