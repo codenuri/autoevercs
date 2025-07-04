@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Xps.Serialization;
 
 namespace PuzzleGame
 {
@@ -38,6 +39,18 @@ namespace PuzzleGame
 
         public void DrawGameImage()
         {
+            Uri path = new Uri("C:\\totoro.jpg");
+
+            BitmapImage bitmap = new BitmapImage(path);
+
+            Image img = new Image();
+            img.Source = bitmap;
+
+
+            Grid.SetRow(img, 0);
+            Grid.SetColumn(img, 0);
+
+            grid.Children.Add(img);
 
         }
 
