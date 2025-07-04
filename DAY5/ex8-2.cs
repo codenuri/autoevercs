@@ -14,6 +14,19 @@ class MainWindow : Window
         Button btn3 = new Button { Content = "button3" };
         Button btn4 = new Button { Content = "button4" };
 
+        StackPanel sp1 = new StackPanel();
+        this.Content = sp1;
+
+        StackPanel sp2 = new StackPanel();
+        sp1.Children.Add(btn1);
+        sp1.Children.Add(btn2);
+        sp1.Children.Add(sp2);
+
+        sp2.Orientation = Orientation.Horizontal;
+
+        sp2.Children.Add(btn3);
+        sp2.Children.Add(btn4);
+
     }
 }
 
