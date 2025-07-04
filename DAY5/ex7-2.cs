@@ -24,10 +24,14 @@ class MainWindow : Window
         */
 
         // #3. Image 객체 등록
+
+        // Uri : 경로를 관리하는 객체 생성
         Uri uri = new Uri("../../../totoro.jpg", UriKind.Relative); 
 
+        // Bitmap : 경로에 있는 그림을 메모리에 Load하는 객체
         BitmapImage bitmap = new BitmapImage(uri);        
 
+        // Image : 그림을 UI 컨트롤 처럼 사용하기 위한 객체
         Image img = new Image();
         img.Source = bitmap;
 
