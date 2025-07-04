@@ -12,6 +12,9 @@ class MainWindow : Window
         // #1. Layout(Panel)을 먼저 생성후 Window 에 Content로
         StackPanel sp = new StackPanel();
         
+//      sp.Orientation = Orientation.Vertical;
+        sp.Orientation = Orientation.Horizontal;
+
         this.Content = sp;
 
         // #2. 이제 다양한 컨트롤을 만들어서 stack panel 에 자식으로 부착
