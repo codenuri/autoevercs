@@ -46,6 +46,7 @@ namespace PuzzleGame
                     state[y, x] = y * CNT + x;
                 }
             }
+//        state[1, 1] = 22; // 테스트용
         }
 
 
@@ -74,9 +75,11 @@ namespace PuzzleGame
             for (int y = 0; y < CNT; y++)
             {
                 for (int x = 0; x < CNT; x++)
-                {
-                    
-                    int num = y * CNT + x;
+                {                    
+                    if (state[y,x] == EMPTY)
+                        continue;
+
+                    int num = state[y, x];
 
                     // num 번째 블럭이 몇번째 Row, Col 인지 계산
                     int bx = num % CNT; // 2 <== Col
@@ -115,6 +118,7 @@ namespace PuzzleGame
                 
             // XAML에서 만든 요소를 사용하려면 위 함수 다음에서
             InitGrid();
+            InitState();
             DrawGameImage();
 
         }
