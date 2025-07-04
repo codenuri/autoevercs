@@ -1,11 +1,11 @@
 <StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 
-    <Button>OK1</Button>
-    
-    <Button Content="OK2"></Button>
-    
-    <Button Content="OK3"/>
-    
-    <Button Content="OK4" Background="Yellow"/>
+    <Button Name="button1">OK1</Button>
+
+    <Button Name="button2" Content="OK2"></Button>
+
+    <Button Name="button3" Content="OK3"/>
+
+    <Button Name="button4" Content="OK4" Background="Yellow"/>
 
 </StackPanel>

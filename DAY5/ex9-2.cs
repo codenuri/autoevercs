@@ -13,15 +13,29 @@ using System.Windows.Media.Imaging;
 
 class MainWindow : Window
 {
+    // 아래 코드는 버튼의 참조만 만든것, 버튼 자체를 만든것은 아닙니다.
+    private Button btn1 = null;
+    private Button btn2 = null;
+    private Button btn3 = null;
+    private Button btn4 = null;
+
     public MainWindow()
     {
-        FileStream fs = new FileStream("../../../ex9-1.xaml", FileMode.Open);
+        FileStream fs = new FileStream("../../../ex9-2.xaml", FileMode.Open);
 
-        Button btn = (Button)XamlReader.Load(fs);
+        StackPanel sp = (StackPanel)XamlReader.Load(fs);
 
         fs.Close();
 
-        this.Content = btn;
+        this.Content = sp;
+
+
+        btn1 = (Button)sp.FindName("button1");
+        btn2 = (Button)sp.FindName("button2");
+        btn3 = (Button)sp.FindName("button3");
+        btn4 = (Button)sp.FindName("button4");
+
+        
     }
 }
 
