@@ -127,13 +127,13 @@ namespace PuzzleGame
         // block 이동
         private void grid_MouseLeftButtonDown(object sender, 
                                              MouseButtonEventArgs e)
-        {
+        { 
             // grid 를 기존으로 클릭된 좌표 얻기
             Point pt = e.GetPosition(grid);
 
             // 현재 좌표가 몇번째 블럭인가 ?
-            int bx = (int)(grid.ActualWidth / block_width);
-            int by = (int)(grid.ActualHeight / block_height);
+            int bx = (int)(pt.X / (grid.ActualWidth / CNT));
+            int by = (int)(pt.Y / (grid.ActualHeight / CNT));
 
             // 잘못된 곳 처리
             if (bx < 0 || by < 0 || bx >= CNT || by >= CNT) return;
@@ -158,6 +158,7 @@ namespace PuzzleGame
             }
             else
             {
+                Console.WriteLine("이동불가");
                 SystemSounds.Beep.Play(); // 이동 불가, "삑"
             }
         }
