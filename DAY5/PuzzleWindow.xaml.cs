@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -137,7 +138,28 @@ namespace PuzzleGame
             // 잘못된 곳 처리
             if (bx < 0 || by < 0 || bx >= CNT || by >= CNT) return;
 
+            // 선택된 블럭의 상/하/좌/우에 EMPTY 값이 있는가 ?
 
+            if ( bx < CNT-1 && state[by, bx +1 ] == EMPTY) // 오른쪽이 EMPTY
+            {
+            //    Swap(by, bx, by, bx + 1);
+            }
+            else if (by < CNT - 1 && state[by+1, bx] == EMPTY) // 아래쪽이 EMPTY
+            {
+            //    Swap(by, bx, by+1, bx);
+            }
+            else if (bx > 0 && state[by, bx-1] == EMPTY) // 윈쪽
+            {
+            //    Swap(by, bx, by, bx - 1);
+            }
+            else if (by > 0 && state[by-1, bx] == EMPTY) // 위쪽
+            {
+           //     Swap(by, bx, by-1, bx);
+            }
+            else
+            {
+                SystemSounds.Beep.Play(); // 이동 불가, "삑"
+            }
         }
     }
 }
