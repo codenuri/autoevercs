@@ -58,8 +58,9 @@ namespace PuzzleGame
                     // 3. Bitmap 에서 1번째 블럭만 잘라내기
                     int num = y * CNT + x;
 
-                    int bx = num % CNT; // 2 <== x
-                    int by = num / CNT; // 1 <== Y
+                    // num 번째 블럭이 몇번째 Row, Col 인지 계산
+                    int bx = num % CNT; // 2 <== Col
+                    int by = num / CNT; // 1 <== Row
 
                     CroppedBitmap cb = new CroppedBitmap(bitmap,
                                    new Int32Rect((int)(bx * block_width),
