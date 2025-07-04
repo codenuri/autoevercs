@@ -142,24 +142,48 @@ namespace PuzzleGame
 
             if ( bx < CNT-1 && state[by, bx +1 ] == EMPTY) // 오른쪽이 EMPTY
             {
-            //    Swap(by, bx, by, bx + 1);
+                Swap(by, bx, by, bx + 1);
             }
             else if (by < CNT - 1 && state[by+1, bx] == EMPTY) // 아래쪽이 EMPTY
             {
-            //    Swap(by, bx, by+1, bx);
+                Swap(by, bx, by+1, bx);
             }
             else if (bx > 0 && state[by, bx-1] == EMPTY) // 윈쪽
             {
-            //    Swap(by, bx, by, bx - 1);
+                Swap(by, bx, by, bx - 1);
             }
             else if (by > 0 && state[by-1, bx] == EMPTY) // 위쪽
             {
-           //     Swap(by, bx, by-1, bx);
+                Swap(by, bx, by-1, bx);
             }
             else
             {
                 Console.WriteLine("이동불가");
                 SystemSounds.Beep.Play(); // 이동 불가, "삑"
+            }
+        }
+
+        public void Swap(int y1, int x1, int y2, int x2)
+        {
+            // state 배열의 내용을 swap
+            int temp = state[y1, x1];
+            state[y1, x1] = state[y2, x2];
+            state[y2, x2] = temp;
+
+            // grid 안의 Image 얻기
+            Image img1 = GetImage(y1, x1);
+            Image img2 = GetImage(y2, x2);
+
+            if (img1 != null)
+            {
+                Grid.SetRow(img1, y2);
+                Grid.SetColumn(img1, x2);
+            }
+
+            if (img2 != null)
+            {
+                Grid.SetRow(img2, y1);
+                Grid.SetColumn(img2, x1);
             }
         }
     }
