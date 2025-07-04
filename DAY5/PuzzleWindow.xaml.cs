@@ -33,6 +33,25 @@ namespace PuzzleGame
             }
         }
 
+        // #2. 게임판의 상태를 나타내는 2차원 배열
+        private int[,] state = new int[CNT, CNT]; // 5 * 5 2차 배열
+
+        public void InitState()
+        {
+            // 2차 배열을 0 ~ 24 로 차례대로 채우기
+            for (int y = 0; y < CNT; y++)
+            {
+                for(int x = 0; x < CNT; x++)
+                {
+                    state[y, x] = y * CNT + x;
+                }
+            }
+        }
+
+
+
+
+
         // #3. 게임 그림 출력하기
         private double block_width = 0;
         private double block_height = 0;
