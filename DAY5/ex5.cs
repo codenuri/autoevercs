@@ -26,9 +26,9 @@ class Program
     [STAThread]
     public static void Main()
     {
-        Application app = new Application();
+        App app = new App();
 
-        Window w = new Window();
+        MainWindow w = new MainWindow();
         w.Show();
 
         app.Run();
