@@ -24,12 +24,13 @@ class Program
 
     private static void App_Exit(object sender, ExitEventArgs e)
     {
-        Console.WriteLine("프로그램이 시작됩니다.");
+        Console.WriteLine("프로그램이 종료됩니다.");
     }
 
     private static void App_Startup(object sender, StartupEventArgs e)
     {
-        Console.WriteLine("프로그램이 종료됩니다.");
+        
+        Console.WriteLine("프로그램이 시작됩니다.");
     }
 
     private static void OnRightDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
