@@ -48,6 +48,8 @@ class MainWindow : Window
 
         // #3. 각 자식 컨트롤이 Grid의 어느 위치에 놓일지 설정
         // => 역시 독특한 방법입니다.
+        // Grid 의 static method 사용..
+        // => 이렇게 설계한 의도는 UI 를 XML 로 만들기 쉽게 하려고...(오후에)
 
         Grid.SetRow(btn1, 0);
         Grid.SetColumn(btn1, 0);
@@ -56,7 +58,7 @@ class MainWindow : Window
         Grid.SetColumn(btn2, 2);
 
         Grid.SetRow(btn3, 1);
-        Grid.SetColumn(btn3, 2);
+        Grid.SetColumn(btn3, 1);
 
         Grid.SetRow(btn4, 2);
         Grid.SetColumn(btn4, 2);
