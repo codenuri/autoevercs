@@ -35,7 +35,14 @@ class MainWindow : Window
         btn3 = (Button)sp.FindName("button3");
         btn4 = (Button)sp.FindName("button4");
 
-        
+        // 버튼을 누를때 이벤트 처리하려면
+        // "Click" 이벤트에 메소드 등록하면 됩니다.
+        btn1.Click += Btn1_Click;
+    }
+
+    private void Btn1_Click(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("button1 click");
     }
 }
 
