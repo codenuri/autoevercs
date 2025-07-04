@@ -32,9 +32,20 @@ namespace PuzzleGame
             }
         }
 
+        // #3. 게임 그림 출력하기
+        private double block_width = 0;
+        private double block_height = 0;
+
+        public void DrawGameImage()
+        {
+
+        }
+
 
         public PuzzleWindow()
         {
+            InitGrid();
+
             InitializeComponent();
         }
     }
