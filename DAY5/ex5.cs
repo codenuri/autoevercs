@@ -9,7 +9,12 @@ class MainWindow : Window
 {
     public MainWindow()
     {
+        this.MouseLeftButtonDown += MainWindow_MouseLeftButtonDown;
+    }
 
+    private void MainWindow_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        MessageBox.Show("LBUTTON");
     }
 }
 
