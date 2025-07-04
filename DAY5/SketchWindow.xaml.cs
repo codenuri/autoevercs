@@ -42,6 +42,7 @@ namespace SKETCH
 
                 // WPF 객체지향이 잘되어 있습니다
                 Line line = new Line();
+                line.Stroke = SystemColors.WindowFrameBrush;
 
                 line.X1 = from.X;
                 line.Y1 = from.Y;
