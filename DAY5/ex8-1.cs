@@ -8,6 +8,7 @@ using System.Windows.Media.Imaging;
 // => 여러개의 자식 컨트롤을 화면에 배치하는 책임을 지는 클래스
 // => 1. Window 위에는 Layout 부착
 // => 2. 다양한 자식 컨트롤은 Layout 에 "Layout객체.Children.Add(자식컨트롤)"
+// => 3. 7 ~ 10 개 정도 종류가 있습니다.
 
 class MainWindow : Window
 {
