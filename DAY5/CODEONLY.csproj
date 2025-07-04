@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <UseWPF>true</UseWPF>  
+	  
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ex1.cs" />
+    <Compile Remove="ex2.cs" />
+    <Compile Remove="ex3.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ex1.cs" />
+    <None Include="ex2.cs" />
+    <None Include="ex3.cs" />
+  </ItemGroup>
+
+</Project>
