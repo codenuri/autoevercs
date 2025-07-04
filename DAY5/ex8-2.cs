@@ -5,6 +5,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 
+// 핵심 : Layout(Panel) 은 중첩 가능하다.
+// => 기본 패널들의 조합(중첩)으로 어떠한 복잡한 형태도 모두 만들수 있다.
+
 class MainWindow : Window
 {
     public MainWindow()
@@ -27,6 +30,9 @@ class MainWindow : Window
         sp2.Children.Add(btn3);
         sp2.Children.Add(btn4);
 
+        sp2.Height = 50;
+
+        
     }
 }
 
