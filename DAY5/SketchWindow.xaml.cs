@@ -36,7 +36,22 @@ namespace SKETCH
 
         private void canvas_MouseMove(object sender, MouseEventArgs e)
         {
+            if ( e.LeftButton == MouseButtonState.Pressed )
+            {
+                Point to = e.GetPosition(this);
 
+                // WPF 객체지향이 잘되어 있습니다
+                Line line = new Line();
+
+                line.X1 = from.X;
+                line.Y1 = from.Y;
+                line.X2 = to.X;
+                line.Y2 = to.X;
+
+                // canvas layout 에 선을 붙이면 됩니다.
+                canvas.Children.Add(line);
+
+            }
         }
     }
 }
