@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// null.cs
 
-namespace CSHARP_ADV
-{
-    internal class @null
-    {
-    }
-}
+string name = null;
+
+// 참조가 null 인 경우 절대 사용하면 안됩니다.
+name.ToUpper();
+
+// 해결책 #1. 항상 null 인지 조사후 사용
+if (name != null) { }
+
+
+// 해결책 #2. 모든 변수는 항상 유효한 값을 가지게 하자
+// => null 로 초기화 할수 없게 하자
+// => 이방법이 더 안전
+//----------------------------------
+
+// value type
+// => null 을 허용할지 말지를 개발자가 선택할수 있다
+int? age1 = null; // age1. null 가능성 있다, 항상 조심해서 사용
+int age2 = null;  // age2. null 가능성 없다. 안전하다.
+
+// 프로그램에서 사용하는 변수가 항상 어떤 값을 가지게 된다면(즉, Null 상태가 없다면)
+// => int? 보다 int 가 좋다(안전하다)
+// => 되도록 int 만 사용해라
