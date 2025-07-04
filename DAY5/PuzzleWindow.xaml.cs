@@ -50,12 +50,13 @@ namespace PuzzleGame
             block_height = bitmap.Height / CNT;
 
             //---------------------------
-
+            // 3. Load된 전체 Bitmap 에서 1번째 블럭만 잘라내서 
+            //    Grid 에 추가 => 를 이중 루프로 25번 반복
             for (int y = 0; y < CNT; y++)
             {
                 for (int x = 0; x < CNT; x++)
                 {
-                    // 3. Bitmap 에서 1번째 블럭만 잘라내기
+                    
                     int num = y * CNT + x;
 
                     // num 번째 블럭이 몇번째 Row, Col 인지 계산
