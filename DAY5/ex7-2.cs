@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 // 핵심 : "Content" 라는 속성
 // => WPF 에서 가장 중요한 속성
@@ -16,9 +17,21 @@ class MainWindow : Window
         // this.Content = "Hello";
 
         // #2. 버튼 객체 등록
+        /*
         Button btn = new Button();
-
+        btn.Content = "OK";
         this.Content = btn;
+        */
+
+        // #3. Image 객체 등록
+        Uri uri = new Uri("../../../totoro.jpg", UriKind.Relative); 
+
+        BitmapImage bitmap = new BitmapImage(uri);        
+
+        Image img = new Image();
+        img.Source = bitmap;
+
+        this.Content = img;
     }
 }
 
