@@ -39,7 +39,8 @@ namespace PuzzleGame
 
         public void DrawGameImage()
         {
-            Uri path = new Uri("C:\\totoro.jpg");
+            // C:\\totoro.jpg 놓으세요
+            Uri path = new Uri("C:\\totoro.jpg", UriKind.Absolute);
 
             BitmapImage bitmap = new BitmapImage(path);
 
@@ -50,16 +51,19 @@ namespace PuzzleGame
             Grid.SetRow(img, 0);
             Grid.SetColumn(img, 0);
 
-            grid.Children.Add(img);
-
+            grid.Children.Add(img);            
         }
 
-
+           
         public PuzzleWindow()
         {
-            InitGrid();
-
+            // XAML 의 모든 요소는아래 함수에서 생성/초기화
             InitializeComponent();
+                
+            // XAML에서 만든 요소를 사용하려면 위 함수 다음에서
+            InitGrid();
+            DrawGameImage();
+
         }
     }
 }
