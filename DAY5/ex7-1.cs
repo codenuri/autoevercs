@@ -16,6 +16,8 @@ class MainWindow : Window
 
         this.Background = new SolidColorBrush(Colors.Magenta);
         this.Topmost = true;
+
+        // 이외에도 수십~수백개의 속성들이 있습니다.        
     }
 }
 
