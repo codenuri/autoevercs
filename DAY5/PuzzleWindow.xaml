@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:PuzzleGame"
         mc:Ignorable="d"
         Title="PuzzleWindow" Height="450" Width="800">
-    <Grid>
+    
+    <DockPanel>
         
-    </Grid>
+        <Button Content="Shuffle" Width="300" FontSize="20"
+                DockPanel.Dock="Top"/>
+
+        <Grid Name="grid">
+            
+        </Grid>
+
+    </DockPanel>
+    
 </Window>
