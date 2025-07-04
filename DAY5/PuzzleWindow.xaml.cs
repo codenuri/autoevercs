@@ -179,12 +179,23 @@ namespace PuzzleGame
                 Grid.SetRow(img1, y2);
                 Grid.SetColumn(img1, x2);
             }
-
             if (img2 != null)
             {
                 Grid.SetRow(img2, y1);
                 Grid.SetColumn(img2, x1);
             }
+        }
+
+        // Grid에서 row, col 에 있는 Image 를 한번에 구할수 없습니다.
+        // 그래서 아래 처럼해야 합니다.
+        public Image GetImage(int y1, int x1)
+        {
+            foreach( UIElement e in grid.Children )
+            {
+                if (Grid.GetRow(e) == y1 && Grid.GetColumn(e) == x1)
+                    return (Image)e;
+            }
+            return null;
         }
     }
 }
