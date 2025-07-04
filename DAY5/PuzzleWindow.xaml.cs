@@ -42,7 +42,6 @@ namespace PuzzleGame
             // 1. 전체 그림 Load 해서 Bitmap 만들기
             // C:\\totoro.jpg 놓으세요
             Uri path = new Uri("C:\\totoro.jpg", UriKind.Absolute);
-
             BitmapImage bitmap = new BitmapImage(path);
 
             //---------------------------
@@ -52,8 +51,14 @@ namespace PuzzleGame
 
             //---------------------------
             // 3. Bitmap 에서 1번째 블럭만 잘라내기
+            int bx = 3;
+            int by = 3;
+
             CroppedBitmap cb = new CroppedBitmap(bitmap,
-                           new Int32Rect(0, 0, (int)block_width, (int)block_height));
+                           new Int32Rect((int)(bx * block_width), 
+                                         (int)(by * block_height), 
+                                         (int)block_width, 
+                                         (int)block_height));
 
             // 4. 한블럭의 bitmap 으로 Image 객체 만들기
             Image img = new Image();
