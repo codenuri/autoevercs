@@ -1,7 +1,17 @@
 ﻿using System.Windows;
 using System.Windows.Media;
 
-// 핵심 : 윈도우의 다양한 Event 처리하기
+// 핵심 #1. WPF 의 핵심 객체 2개
+
+// 1. Application 객체 : 프로그램의 시작/끝 등의 life cycle 에서 event 함수 등록
+//                       event 루프 실행(app.Run())
+
+// 2. Window 객체 : 주된 UI 윈도우 담당
+
+// 핵심 #2. event 처리함수 등록하는 방법
+
+// 핵심 #3. 아래 코드의 단점
+// => 
 
 class Program
 {
