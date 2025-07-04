@@ -39,6 +39,7 @@ namespace PuzzleGame
 
         public void DrawGameImage()
         {
+            // 전체 그림 Load
             // C:\\totoro.jpg 놓으세요
             Uri path = new Uri("C:\\totoro.jpg", UriKind.Absolute);
 
@@ -46,6 +47,20 @@ namespace PuzzleGame
 
             Image img = new Image();
             img.Source = bitmap;
+
+            //---------------------------
+            // 2. 블럭 크기 계산
+            block_width = bitmap.Width / CNT;
+            block_height = bitmap.Height / CNT;
+
+            //---------------------------
+            // 3. Bitmap 에서 1번째 블럭만 잘라내기
+            CroppedBitmap cb = new CroppedBitmap(bitmap,
+                           new Int32Rect(0, 0, block_width, block_height));
+
+
+
+
 
 
             Grid.SetRow(img, 0);
