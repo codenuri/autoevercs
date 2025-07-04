@@ -27,13 +27,21 @@ using System.Windows.Media.Imaging;
 // => App.cs
 //----------------------------------------------------
 
+// WPF 프로그램은 아래 2개의 객체를 생성
+// => Window
+// => App
+
 // 또한, Window 객체 뿐 아니라 App 객체도 XAML 로 만들면
 // => 다양한 App 속성을 C# 코드가 아닌 XAML 로 설정 가능.
+
 
 
 // Wizard 가 생성하는 4개의 파일
 // MainWindow.xaml : window 창에 대한 XML(ex9-3.xaml 과 동일)
 // MainWindow.cs   : window 창에 대한 event 처리를 담당 - MainWindow 클래스
+
+// App.xaml : App 객체 생성
+// App.cs   : App 에 대한 이벤트 처리를 담당하는 C# 코드
 
 
 class MainWindow : Window
@@ -61,6 +69,7 @@ class App : Application
     {
         App app = new App();
 
+        
 
         FileStream fs = new FileStream("../../../ex9-3.xaml", FileMode.Open);
         Window w = (Window)XamlReader.Load(fs);
