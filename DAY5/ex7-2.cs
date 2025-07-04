@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 // 핵심 : "Content" 라는 속성
@@ -10,7 +11,14 @@ class MainWindow : Window
     public MainWindow()
     {
         this.Title = "ABCD";
-        this.Content = "Hello";
+
+        // #1. 문자열 객체 등록
+        // this.Content = "Hello";
+
+        // #2. 버튼 객체 등록
+        Button btn = new Button();
+
+        this.Content = btn;
     }
 }
 
