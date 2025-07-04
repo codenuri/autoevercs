@@ -19,21 +19,23 @@ class MainWindow : Window
     private Button btn3 = null;
     private Button btn4 = null;
 
-    public MainWindow()
+    public void InitializeComponent()
     {
+        // XAML 을 Load 등의 UI 초기화 책임.
         FileStream fs = new FileStream("../../../ex9-2.xaml", FileMode.Open);
-
         StackPanel sp = (StackPanel)XamlReader.Load(fs);
-
         fs.Close();
-
         this.Content = sp;
-
 
         btn1 = (Button)sp.FindName("button1");
         btn2 = (Button)sp.FindName("button2");
         btn3 = (Button)sp.FindName("button3");
         btn4 = (Button)sp.FindName("button4");
+    }
+
+    public MainWindow()
+    {
+        InitializeComponent();
 
         // 버튼을 누를때 이벤트 처리하려면
         // "Click" 이벤트에 메소드 등록하면 됩니다.
