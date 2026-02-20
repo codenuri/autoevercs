@@ -26,12 +26,25 @@ class Rect
     }
 }
 
-// 이제 사각형이 필요하면 "Rect" 타입을 사용하면 됩니다.
-Rect rc = new Rect();
-rc.left = 1;
-rc.top = 1;
-rc.right = 10;
-rc.bottom = 10;
+// Top-Level 방식
+// => Main 없이, 소스 파일 1번째 줄부터 실행되는 방식
+// => class 등의 문법을 사용할때 제약이 많습니다.
+// => 그래서 실전에서는 Main 함수 만드는 방식으로
+
+// 아래 클래스는 무조건 외우세요. 월요일에 자세한 문법 설명
+class Program
+{
+    public static void Main()
+    {
+        // 이제 사각형이 필요하면 "Rect" 타입을 사용하면 됩니다.
+        Rect rc = new Rect();
+        rc.left = 1;
+        rc.top = 1;
+        rc.right = 10;
+        rc.bottom = 10;
 
 
-int area = rc.GetArea(); // 면적 구하기
+        int area = rc.GetArea(); // 면적 구하기
+
+    }
+}
