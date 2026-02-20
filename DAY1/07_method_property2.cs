@@ -20,6 +20,16 @@ string s = num.ToString(); // "변수이름.메소드이름()" instance method
 int ret = int.Max(10, 20); // "타입이름.메소드이름()" static method
                             // 특정값이 아닌 타입(int)자체 와 관련된 기능
 // property 도 2가지 종류
-Console.WriteLine(s.Length);    // s가 가진값("10") 의 길이
-Console.WriteLine(int.MaxValue);// int 타입이 가질수 있는 최대값
-Console.WriteLine(int.MinValue);// int 타입이 가질수 있는 최대값
+Console.WriteLine(s.Length);    // s가 가진값("10") 의 길이  instance property
+Console.WriteLine(int.MaxValue);// int 타입이 가질수 있는 최대값 static property
+Console.WriteLine(int.MinValue);// int 타입이 가질수 있는 최소값
+
+
+string s2 = "10";
+
+// 문자열 "10" => 정수 10 으로 변경하는 2가지 방법
+
+int n1 = Convert.ToInt32(s2); // Convert 클래스의 static 메소드 사용
+int n2 = int.Parse(s2);       // int     클래스의 static 메소드 사용
+
+Console.WriteLine(n2);
