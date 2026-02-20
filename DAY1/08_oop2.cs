@@ -37,14 +37,22 @@ class Program
     public static void Main()
     {
         // 이제 사각형이 필요하면 "Rect" 타입을 사용하면 됩니다.
-        Rect rc = new Rect();
-        rc.left = 1;
-        rc.top = 1;
+        Rect rc = new Rect(); // new Rect(1,1,10,10)
+        rc.left  = 1;
+        rc.top   = 1;
         rc.right = 10;
-        rc.bottom = 10;
+        rc.bottom= 10;
 
 
         int area = rc.GetArea(); // 면적 구하기
 
     }
 }
+
+// C#/Java 에서 알아야 하는 것들
+
+// 1. Rect 같은 타입(클래스)를 만들때 필요한 문법 - 어려운 과정
+
+// 2. 미리 만들어진 타입(클래스, 표준라이브러리) 사용법
+// => 사용법 자체는 쉽다
+// => 그런데, 양이 많다 (수만개 클래스)
