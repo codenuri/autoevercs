@@ -1,4 +1,4 @@
-using System;   // System 안에 있는 요소는 System 없이 사용가능
+using System;               // System 안에 있는 요소는 System 없이 사용가능
 using static System.Console; // Console 의 static 메소드는 
                              // Console 없이 사용가능
 
