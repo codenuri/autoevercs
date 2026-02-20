@@ -17,14 +17,13 @@ using static System.Console;
 
 //              조건식                 {}
 // Python       () 생략가능             {} 대신 들여쓰기로
-// C#           () 필수                 {} 생략안됨. 필수
+// C#           () 필수                 {} 안의 문장이 한문장이면 생략가능. 단 붙이는 것을 권장
 // C            () 필수                 {} 안의 문장이 한문장이면 생략가능
 int score = 75;
 
-if (score > 70 ) 
-{
+if (score > 70 )
     WriteLine("Pass");
-}
+
 else if( score < 40) 
 {
     WriteLine("Fail");
