@@ -14,6 +14,8 @@ class Program
         Window w = new Window();
         w.Show();
 
-        MessageBox.Show("Hello");
+//      MessageBox.Show("Hello");
+
+        // 그런데, 이경우, 프로그램은 즉시 종료 되므로 윈도우 바로 파괴!!
     }
 }
