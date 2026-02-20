@@ -12,7 +12,9 @@ Console.Write("input yout age >> ");
 string s = Console.ReadLine(); // "10"
 
 // 입력된 "10" 이라는 문자열을 정수 10 으로 변경해서 사용
+// => "10" 이 아닌 "AA" 같은 문자열이면 프로그램은 비정상 종료(예외 발생)
 int n = Convert.ToInt32(s);
+
 
 //Console.WriteLine(s * s); // error. "10" * "10" 즉, 문자열은 곱셈 안됨
 Console.WriteLine(n * n); // 100 
