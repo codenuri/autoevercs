@@ -18,11 +18,15 @@
 // => 장점 : 자동생성되는 파일 단 1개, 한줄의 코드만 생성
 // => 사용자가 가장 기본 코드부터 학습 가능
 
+using System.Windows;
+
 Console.WriteLine("Hello, World!");
 
 
 // System.Windows.MessageBox 클래스의 static method를 사용하면 MessageBox를 나타낼수 있습니다.
-MessageBox.Show("Hello");
+MessageBox.Show("Hello", "AAA");
 
 
-// 파일이름 wpf1.cs로 변경
+// 핵심 : "콘솔 프로젝트" 에서 "WPF" 사용법 알아 두세요.
+// => 실전 개발은 "WPF 응용 프로그램" 으로 하지만
+// => 학습 시에서 이방법이 가장 좋습니다.
