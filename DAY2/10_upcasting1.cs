@@ -59,6 +59,10 @@ class Program
         // => is 연산자로 조사후 사용하면 됩니다.
         if ( r3 is Dog )
         {
+            // r3 자체는 아직 Animal 
+
+            // Dog 타입 참조를 만들어서 r3 가 가진 주소를 담아서 
+            // d 사용. 이러면 d를 계속 사용가능
             Dog d = (Dog)r3;    
             d.Color = 10;
         }
