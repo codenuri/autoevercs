@@ -33,8 +33,9 @@ class Program
 
         // primitive type(언어 자체가 제공하는 타입) 은
         // 변수 생성시 "new 를 사용하지 않은 단축 표기법"을 제공
+        // 문맥적 달콤함(syntax sugar) 라고 합니다. 
         // => 목표 : 다른 언어와 동일하게 사용하게 하기 위해
-        int n2 = 0;
+        int n2 = 0;             // int n2 = new int() 와 동일
         double d2 = 3.4;
         string s2 = "AAA";
 
