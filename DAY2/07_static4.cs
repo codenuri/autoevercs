@@ -15,7 +15,12 @@ class Date
     public int Month
     {
         get => month;
-        set { if (value > 0 && value < 13) { month = value; } }
+        set {
+            if (value > 0 && value < 13)
+                month = value;
+            else
+                throw new Exception("bad argument");
+        }
     }
 
     // 과제 : 복습할때 Year, Day 도 만들어 보세요.
@@ -32,5 +37,8 @@ class Program
         Date d1 = new Date(2025, 2, 23);
 
         Console.WriteLine(d1.Month); // 2
+
+        d1.Month = 20; // 예외 발생. 비정상 종료
+
     }
 }
