@@ -55,5 +55,13 @@ class Program
                               // Dog 라는 확신이 있어야 합니다.
                               // Dog 가 아니면 runtime error
 
+        // 핵심 #5. Dog 라는 확신이 없다면
+        // => is 연산자로 조사후 사용하면 됩니다.
+        if ( r3 is Dog )
+        {
+            Dog d = (Dog)r3;    
+            d.Color = 10;
+        }
+
     }
 }
