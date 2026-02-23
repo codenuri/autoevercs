@@ -25,6 +25,9 @@ int* p = (int*)malloc(sizeof(int));   // heap 에 4바이트 할당후 10 으로초기화
 
 // C#, Java 의 철학
 // => Rect 타입의 크기가 큰지 작은지는 누가 알수 있을까 ?
-// => 1. 타입 사용자   2. 타입 설계자
+// => 1. 타입 사용자   2. 타입 설계자 => 답은 2번
 
 // C#/Java/Swift : 타입설계자가 stack 을 사용할지 heap 을 사용할지 결정
+
+// class : 데이타를 Heap 에 할당
+// struct : 데이타를 Stack 에 할당
