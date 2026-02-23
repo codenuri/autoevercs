@@ -16,6 +16,8 @@
     // 이 경우 아래 한줄만 작성하면 위와 완전히 동일
     // auto-implemented property 개념
     public int Age { get; set; } = 0;
+        // 1. 필드가 자동으로 생성되고
+        // 2. Age property 의 set, get 의 기본 구현이 자동 추가
 }
 
 class Program
