@@ -40,6 +40,15 @@ class Program
         string s2 = "AAA";
 
         // 단, 사용자 타입은 반드시 new 사용
+        // primitive type : 언어 자체가 제공 (해당언어의 컴파일러가 인식)
+        //                  => int, double, char 등... 19page 목록
+        // user define type : class(struct) 등의 문법으로 만들어진 타입
+        //                    타입 이름을 컴파일러가 인식하는 것이 아니라
+        //                    class 문법으로 만들어진것
+
+        // WPF 예제에서 사용했던 "Window" 도
+        // => 결국은 class 문법으로 만들어 놓은것
+        // => UDT(User Define Type) 입니다.
 
     }
 }
