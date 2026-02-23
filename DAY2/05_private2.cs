@@ -1,5 +1,22 @@
 ﻿using static System.Console;
 
+// 객체지향 언어의 3대 특징 : 캡슐화, 상속, 다형성
+
+// 캡슐화(encapsulation)
+// => 상태를 나타내는 필드를 private 에 놓아서
+// => 외부의 잘못된 사용으로 부터 객체의 상태가 불안전해 지는 것을 막는다
+// => 객체의 상태는 잘 정의된 메소드를 통해서만 변경 가능하다
+// => 안전하고, 사용하기 쉬운 타입 설계
+
+// 일반적인 관례
+// 필드는   private
+// 메소드는 public 
+
+
+// C++, C#, Java : private, public 모두 지원
+// Python : 이 개념 없음
+
+
 class Bike
 {
     private int gear = 0;
