@@ -10,8 +10,8 @@ class Person
                           // Person 의 파생 클래스에 모두 추가됨
 }
 
-// Person  : Base class,    Super class, Parent class 라는 용어 사용
-// Student : Derived class, Sub class,   Child class 
+// Person  : Base(기반) class,    Super class, Parent class 라는 용어 사용
+// Student : Derived(파생) class, Sub class,   Child class 
 
 // 상속(inheritance)
 // => 기존 타입을 확장해서 새로운 타입을 만드는 것
