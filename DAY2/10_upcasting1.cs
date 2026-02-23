@@ -37,10 +37,23 @@ class Program
 
         // 핵심 #3. r3 를 가지고는 Animal 로 부터 파생된 멤버만 접근가능
         // => Dog 고유 멤버 접근 안됨
+        // 이유 : 멤버(필드, 메소드) 접근이 유효 한가의 확인
 
+        // C++, C#, Java : 컴파일 시간(static type check)
+        // Python        : 실행시간(dynamic type check)
+
+        // 컴파일러는 가리키는 곳의 타입을 알수 없다 - 핵심 #2.
+        // 컴파일러가 알고 있는 것
+        // r3 자체 타입 : Animal 이라는 것
+        // r3 가 가리키는 곳의 객체의 타입 : 모른다!
         r3.Age   = 10; // ok
-        r3.Color = 10; // error
+ //     r3.Color = 10; // error
 
+        // 핵심 #4. Dog 고유 멤버에 접근하려면 캐스팅 해야 합니다.
+        ((Dog)r3).Color = 10; // ok
+                              // 단, 이경우 반드시 r3가 가리키는 곳이
+                              // Dog 라는 확신이 있어야 합니다.
+                              // Dog 가 아니면 runtime error
 
     }
 }
