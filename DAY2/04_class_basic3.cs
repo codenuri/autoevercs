@@ -37,10 +37,12 @@ class Program
         // n 도  "객체" 라고 표현해도 틀리지 않습니다.
 
         // 일반적인 관례(C++, C#, Java)
-        // 언어 자체가 제공하는 타입(primitive type)을 메모리에 만든것 : 변수
-        // class(struct) 문법으로 만든 타입을 메모리에 만든것 : 객체
+        // 언어 자체가 제공하는 타입(primitive type, int, double)을 메모리에 만든것 : 변수
+        // class(struct) 문법으로 만든 타입의 변수를 메모리에 만든것 : 객체
 
         // Rust : 모든 것을 변수 라고 부름
         
     }
 }
+
+// Window w = new Window()   : w 는 윈도우 객체
