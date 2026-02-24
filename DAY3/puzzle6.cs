@@ -1,6 +1,8 @@
-﻿using System.Printing;
+﻿using System.IO;
+using System.Printing;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 // puzzle Step #6. 25 개 Grid 모두 채우기 - UI 완성
@@ -56,9 +58,9 @@ class MainWindow : Window
         grid.Children.Add(img);
         */
 
-        for (int y = 0; y < COUNT-1; y++)
+        for (int y = 0; y < COUNT; y++)
         {
-            for (int x = 0; x < COUNT-1; x++)
+            for (int x = 0; x < COUNT; x++)
             {
                 Int32Rect rc = new Int32Rect(x * bw, y * bh, bw, bh);
 
@@ -66,6 +68,8 @@ class MainWindow : Window
 
                 Image img = new Image();
                 img.Source = cb;
+                img.Stretch = Stretch.Fill;
+
 
                 Grid.SetRow(img, y);
                 Grid.SetColumn(img, x);
