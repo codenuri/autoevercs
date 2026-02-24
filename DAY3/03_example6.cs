@@ -7,6 +7,14 @@ class Shape
     private int color = 0;
 
     public virtual void Draw() { WriteLine("Draw Shape"); }
+
+    // 자신의 복사본을 만드는 가상 메소드는 널리 알려진 디자인 기술
+    public virtual Shape Clone()
+    {
+        Shape s = new Shape(); // 새로운 Shape 만들고
+        s.color = color; // 자신의 모든 속성을 동일하게 복사
+        return s;
+    }
 }
 
 
@@ -59,6 +67,17 @@ class Program
                 // k 번째 도형의 복사본을 생성해서 s 에 추가합니다.
                 // 어떻게 만들어야 할까요 ?
                 // k 번째 도형은 어떤 타입일까요 ?
+
+                // 아래 처럼 했다면 좋지 않은 디자인
+                // OCP 를 만족할수 없는 코드!!
+                /*
+                if (s[k] is Rect)
+                {
+                }
+                else if (s[k] is Circle)
+                {
+                }
+                */
             }
         }
     }
