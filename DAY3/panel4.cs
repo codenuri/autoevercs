@@ -19,16 +19,19 @@ class MainWindow : Window
     {
         DockPanel dp = new DockPanel();
         Content = dp;
-
-        Button b1 = new Button { Content = "OK" };
+                
         TextBox tb = new TextBox();
+        StackPanel sp = new StackPanel();
 
         DockPanel.SetDock(tb, Dock.Top);
-        DockPanel.SetDock(b1, Dock.Bottom);
+        DockPanel.SetDock(sp, Dock.Bottom);
 
-
+        dp.Children.Add(sp);
         dp.Children.Add(tb);
-        dp.Children.Add(b1);
+
+
+//        Button b1 = new Button { Content = "OK" };
+
     }
 }
 
