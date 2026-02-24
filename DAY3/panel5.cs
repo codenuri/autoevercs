@@ -23,6 +23,15 @@ class MainWindow : Window
         Content = grid;
 
         // #1. Row, Col 값 설정
+        // grid.SetRowCol(2, 3); // 일반적인 라이브러리는 이렇게
+        //                          2개 컬럼, 3개 Row
+
+        // WPF 는 독특한 방법 사용
+        grid.RowDefinitions.Add(new RowDefinition());
+        grid.RowDefinitions.Add(new RowDefinition());
+
+        grid.ColumnDefinitions.Add(new ColumnDefinition());
+        grid.ColumnDefinitions.Add(new ColumnDefinition());
 
 
         // #2. 컨트롤을 만들고
@@ -32,11 +41,17 @@ class MainWindow : Window
         // #3. 각 컨트롤이 Grid 에 어디에 놓일지 설정(아직 부착은 아님)
         // => 이 부분이 WPF 라이브러리의 독특한 코드
         Grid.SetRow(b1, 0);
+        Grid.SetColumn(b1, 0);
+
+        Grid.SetRow(b2, 1);
+        Grid.SetColumn(b2, 1);
+
+        // #4. 마지막으로 컨트롤을 Grid 에 부착
+        grid.Children.Add(b1);
+        grid.Children.Add(b2);
 
 
 
-
-    
 
     }
 }
