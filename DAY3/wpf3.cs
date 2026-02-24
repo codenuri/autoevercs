@@ -2,34 +2,22 @@
 using System.Windows.Input;
 
 /*
-
 class Window
 {
-
+    // Title, Width, Content 등의 다양한 Property 제공
 }
 */
 
 class MainWindow : Window
 {
-    protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+    // 생성자 : 객체가 생성될때 자동으로 호출되는 함수
+    //          여기서 윈도우 GUI 관련 초기화 코드를 작성하면됩니다.
+    public MainWindow()
     {
-        MessageBox.Show("LBUTTONDOWN");
-
-        // base: 기반 클래스 를 의미
-        // 기반 클래스의 함수도 실행되도록하기 위해 자동생성된 코드
-        base.OnMouseLeftButtonDown(e);
-    }
-
-    protected override void OnMouseRightButtonDown(MouseButtonEventArgs e)
-    {
-        MessageBox.Show("RBUTTONDOWN");
-        base.OnMouseRightButtonDown(e);
-    }
-
-    protected override void OnKeyDown(KeyEventArgs e)
-    {
-        MessageBox.Show("KEYDOWN");
-        base.OnKeyDown(e);
+        Title = "Hello";
+        Width = 500;
+        Height = 500;
+        Content = "ABCD";
     }
 }
 
@@ -39,6 +27,7 @@ class Program
     public static void Main()
     {
         MainWindow w = new MainWindow();
+        
         w.Show();
 
         Application app = new Application();
