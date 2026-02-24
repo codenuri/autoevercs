@@ -22,17 +22,23 @@ class Shape
 class Rect : Shape
 {
     public override void Draw() { WriteLine("Draw Rect"); }
+
+    public override Shape Clone()
+    {
+        return new Rect();
+    }
 }
 
 class Circle : Shape
 {
     public override void Draw() { WriteLine("Draw Circle"); }
+
+    public override Shape Clone()
+    {
+        return new Circle();
+    }
 }
 
-class Triangle : Shape
-{
-    public override void Draw() { WriteLine("Draw Triangle"); }
-}
 
 class Program
 {
@@ -78,6 +84,15 @@ class Program
                 {
                 }
                 */
+
+                // k 번째 도형이 무엇인지 알필요 없다.
+                s.Add( s[k].Clone() );  // k번째 도형에 복사본을 요청
+                                        // 하면 된다.
+                                        // 다형성 활용
+
+                // 객체지향 언어에서 종종 사용하는 격언
+                // Don't Ask Do It ( 물어보지 말고, 시켜라)
+
             }
         }
     }
