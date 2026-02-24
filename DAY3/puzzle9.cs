@@ -6,7 +6,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-// puzzle Step #9. 블럭 이동하기
+// puzzle Step #9. 마우스 클릭 이벤트 처리
 
 
 class MainWindow : Window
@@ -106,6 +106,10 @@ class MainWindow : Window
 
         Console.WriteLine("{0}, {1} 블럭 클릭", bx, by);
 
+
+        // 게임판 밖이라면 무시
+        if (bx < 0 || bx >= COUNT || by < 0 || by >= COUNT)
+            return;
     }
 
 
