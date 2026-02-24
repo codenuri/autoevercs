@@ -14,10 +14,13 @@ class MainWindow : Window
     //          여기서 윈도우 GUI 관련 초기화 코드를 작성하면됩니다.
     public MainWindow()
     {
+        // 아래의 모든 속성은 "기반 클래스" 인 Window 로 부터 상속 받은것
         Title = "Hello";
         Width = 500;
         Height = 500;
-        Content = "ABCD";
+        Content = "ABCD"; // 캡션바가 아닌 윈도우에 표현할 컨텐츠 연결
+
+        Topmost = true;  // 항상위!!! 항상 다른 윈도우 위에 
     }
 }
 
