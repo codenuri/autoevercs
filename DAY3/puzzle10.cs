@@ -131,6 +131,15 @@ class MainWindow : Window
         // IsComplete(); // 복습시 이함수 만들어 보세요
     }
 
+    public void MoveBlock(int x, int y, int tx, int ty)
+    {
+        // #1. Grid 의 x,y 위치에 있는 image 객체의 참조 얻기
+//      var img = grid.GetChild(x, y); // 이런 메소드가 없습니다.
+
+
+
+        // #2. image 객체의 Grid 위치 속성을 tx, ty 로 변경
+    }
 
 
 
