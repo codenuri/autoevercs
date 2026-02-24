@@ -33,6 +33,12 @@ class MainWindow : Window
         MessageBox.Show("RBUTTONDOWN");
         base.OnMouseRightButtonDown(e);
     }
+
+    protected override void OnKeyDown(KeyEventArgs e)
+    {
+        MessageBox.Show("KEYDOWN");
+        base.OnKeyDown(e);
+    }
 }
 
 class Program
