@@ -40,9 +40,13 @@ class Program
             else if ( cmd == 9)
             {
                 // 만들어진 모든 도형을 그리는 작업
-                foreach( var e in s )
+                foreach( var e in s ) 
                 {
-                    e.Draw(); 
+                    // 현재 s는 List<Shape> 이므로
+                    // e의 타입은 Shape 이다
+                    // Shape 타입인 e 로는 파생 클래스가 추가한
+                    // Draw() 메소드를 호출할수 없다 
+                    e.Draw(); // error
                 }
             }
         }
