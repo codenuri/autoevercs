@@ -100,6 +100,13 @@ class MainWindow : Window
 
        if (bx < 0 || bx >= COUNT || by < 0 || by >= COUNT)
             return;
+
+       // bx, by : 사용자가 클릭한 위치가 Grid 의 몇번째 블럭인가에 대한 정보
+
+       if ( bx > 0 && state[by, bx-1] == EMPTY) // 왼쪽 조사
+        {
+            MoveBlock(bx, by, bx-1, by); // (bx, by) 의 image 를 (bx-1, by)로이동
+        }
     }
 
 
