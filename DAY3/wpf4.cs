@@ -30,7 +30,7 @@ class MainWindow : Window
 
 
         // 이제 다양한 컨트롤을 Panel 에 붙이면 됩니다.
-        Button b1 = new Button { Content = "버튼1 " };
+        Button b1 = new Button { Content = "버튼1", FontSize = 32 };
 
         sp.Children.Add(b1);
 
@@ -41,6 +41,7 @@ class MainWindow : Window
         sp.Children.Add(radio);
 
         // 실행해보고 잘되신분은 버튼한개 더 추가해 보세요
+        sp.Children.Add( new Button { Content = "버튼2" } );
     }
 }
 
