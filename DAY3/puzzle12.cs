@@ -159,39 +159,43 @@ class MainWindow : Window
 
     public void ShuffleMove()
     {
-        int shuffleCount = 1000;
+        int size = 5;
         int emptyValue = 24;
+
+        // 1️⃣ 완성 상태로 초기화 (0~24)
+        int value = 0;
+        for (int r = 0; r < size; r++)
+        {
+            for (int c = 0; c < size; c++)
+            {
+                state[r, c] = value;
+                value++;
+            }
+        }
+
+        // 2️⃣ 셔플 (항상 풀 수 있도록 실제 이동만 수행)
+        int shuffleCount = 1000;
+
+        int emptyRow = 4; // 24는 마지막 위치
+        int emptyCol = 4;
 
         for (int i = 0; i < shuffleCount; i++)
         {
-            int emptyRow = -1;
-            int emptyCol = -1;
-
-            // 빈칸 찾기
-            for (int r = 0; r < 5 && emptyRow == -1; r++)
-            {
-                for (int c = 0; c < 5; c++)
-                {
-                    if (state[r, c] == emptyValue)
-                    {
-                        emptyRow = r;
-                        emptyCol = c;
-                        break;
-                    }
-                }
-            }
-
             List<(int r, int c)> moves = new List<(int, int)>();
 
             if (emptyRow > 0) moves.Add((emptyRow - 1, emptyCol));
-            if (emptyRow < 4) moves.Add((emptyRow + 1, emptyCol));
+            if (emptyRow < size - 1) moves.Add((emptyRow + 1, emptyCol));
             if (emptyCol > 0) moves.Add((emptyRow, emptyCol - 1));
-            if (emptyCol < 4) moves.Add((emptyRow, emptyCol + 1));
+            if (emptyCol < size - 1) moves.Add((emptyRow, emptyCol + 1));
 
             var move = moves[random.Next(moves.Count)];
 
+            // swap
             state[emptyRow, emptyCol] = state[move.r, move.c];
             state[move.r, move.c] = emptyValue;
+
+            emptyRow = move.r;
+            emptyCol = move.c;
         }
     }
 
@@ -200,6 +204,8 @@ class MainWindow : Window
         base.OnMouseRightButtonDown(e);
 
         ShuffleMove(); // state 배열 섞기
+
+        grid.Children.Clear(); // grid 의 기존 모든 Image 제거..
 
         MakeGridImage(); // state 배열을 사용해서 Grid 배치
     }
