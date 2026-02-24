@@ -1,7 +1,6 @@
-﻿using System.Drawing;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-
 
 // puzzle Step #1. 그림 Load해서 윈도우에 연결
 
@@ -19,11 +18,11 @@ class MainWindow : Window
 
         // #3. Load 된 그림을 Content 로 연결 또는 panel 의 자식으로 넣으려면
         // => Image 타입의 객체가 필요
-        Image img = new Image { Source =  bm };
-
+        Image img = new Image();
+        img.Source = bm;
 
         // #4. Content 에 Imae 객체 연결
-        Content = bm;
+        Content = img;
     
     }
 }
