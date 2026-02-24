@@ -17,17 +17,26 @@ class MainWindow : Window
 {
     public MainWindow()
     {
-        StackPanel sp = new StackPanel();
-        Content = sp;
+        DockPanel dp = new DockPanel();
+        Content = dp;
 
-//      sp.Orientation = Orientation.Horizontal;
-        sp.Orientation = Orientation.Vertical; // 디폴트 값
+        // dockpanel 은 top, bottom, left, right 로 부착
+        Button b1 = new Button { Content = "버튼1" };
+        Button b2 = new Button { Content = "버튼2" };
+        Button b3 = new Button { Content = "버튼3" };
+        Button b4 = new Button { Content = "버튼4" };
 
-        // 이제 패턴에 자식 컨트롤 부착
-        sp.Children.Add(new Button() );
-        sp.Children.Add(new Slider() );
-        sp.Children.Add(new ProgressBar { Value=50, Height=20 } );
+        // 각 버튼이 DockPanel 에 어디에 놓일지 설정
+        DockPanel.SetDock(b1, Dock.Top);
+        DockPanel.SetDock(b2, Dock.Left);
+        DockPanel.SetDock(b3, Dock.Right);
+        DockPanel.SetDock(b4, Dock.Bottom);
 
+        // 그리고, 각 버튼을 DockPanel 에 부착
+        dp.Children.Add(b1);
+        dp.Children.Add(b2);
+        dp.Children.Add(b3);
+        dp.Children.Add(b4);
     }
 }
 
