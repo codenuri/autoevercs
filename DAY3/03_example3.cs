@@ -1,6 +1,10 @@
 ﻿using static System.Console;
 
-// 핵심 #3
+// 핵심 #3. 아래 코드가 에러라는 사실
+
+// 모든 도형을 보관하기 위해 List<Shape> 를 사용했는데..
+
+// Shape 타입으로는 Rect, Circle 추가한 고유 멤버 접근 안됨..
 
 class Shape
 {
@@ -54,3 +58,4 @@ class Program
 }
 // 위 코드는 왜 에러일까요 ?
 // 해결책을 뭘까요 ?
+
