@@ -31,7 +31,11 @@ class Program
         // ad 가리키는 객체 : Dog
 
         ad.Cry1();  // static binding   Animal Cry1    컴파일 시간에 결정. 빠름
+                    // reference 타입으로 호출
         ad.Cry2();  // dynamic binding  Dog    Cry2    실행시간에 결정     느림
+                    // 대상체(reference 가 가리키는 실제 객체)의 타입으로 호출
     }
 }
 
+// java 는 모든 메소드가 dynamic binding 입니다.
+// => 즉, virtual 키워드가 없는데,, 모든 메소드가 virtual 처럼 동작한다는것
