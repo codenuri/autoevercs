@@ -5,8 +5,9 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-// puzzle Step #7. 지금까지 코드 정리
-// => UI 출력 완성
+// puzzle Step #8. 게임판의 상태를 나타내는 2차원 배열도입
+// => 이 예제의 핵심!!
+// => 자료구조(배열)을 사용해서 게임의 상태를 관리하는 기술
 
 class MainWindow : Window
 {
@@ -17,6 +18,25 @@ class MainWindow : Window
     private const int EMPTY = COUNT * COUNT - 1;
 
     private Grid grid;
+
+    //---------------------------------------------------------
+    // 이번 단계의 핵심 - 게임판의 상태를 관리하는 2차원 배열
+    private int[,] state = new int[COUNT, COUNT];
+
+    public void InitState()
+    {
+        // 2차원 배열을 0 ~ 24 로 채우는 코드
+        // => 게임판의 블럭이 섞여있지 않은 상태
+        for (int y = 0; y < COUNT; y++)
+        {
+            for (int x = 0; x < COUNT; x++)
+            {
+                // 아래 의미를 생각해 보세요
+                state[y, x] = y * COUNT + x;
+            }
+        }
+    }
+    //-----------------------------------------------------
 
 
     public void InitPanel()
@@ -44,20 +64,37 @@ class MainWindow : Window
         {
             for (int x = 0; x < COUNT; x++)
             {
-                Int32Rect rc = new Int32Rect(x * bw, y * bh, bw, bh); // <= 핵심
+                // state 배열에 있는 정보를 가지고 블럭 선택
+                if ( state[y, x] != EMPTY )
+                {
+                    int bno = state[y, x];
 
-                CroppedBitmap cb = new CroppedBitmap(bm, rc);
+                    // bno 가 8 이라면 8번 블럭의 x, y 를 알아야 합니다.
 
-                Image img = new Image();
-                img.Source = cb;
-                img.Stretch = Stretch.Fill;
-                img.Margin = new Thickness(0.5);
+                    int bx = bno % COUNT; // 3
+                    int by = bno / COUNT; // 1
+
+                    // 아래 Int32Rect 의 인자만 변경
+                    Int32Rect rc = new Int32Rect(bx * bw, by * bh, bw, bh); // <= 핵심
+
+                    CroppedBitmap cb = new CroppedBitmap(bm, rc);
+
+                    Image img = new Image();
+                    img.Source = cb;
+                    img.Stretch = Stretch.Fill;
+                    img.Margin = new Thickness(0.5);
 
 
-                Grid.SetRow(img, y);
-                Grid.SetColumn(img, x);
+                    Grid.SetRow(img, y);
+                    Grid.SetColumn(img, x);
 
-                grid.Children.Add(img);
+                    grid.Children.Add(img);
+
+                }
+
+
+
+
             }
         }
 
@@ -66,6 +103,8 @@ class MainWindow : Window
 
     public MainWindow()
     {
+        InitState();
+
         InitPanel();
 
         MakeGridImage();
