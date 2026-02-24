@@ -30,7 +30,8 @@ class MainWindow : Window
         dp.Children.Add(tb);
 
 
-//        Button b1 = new Button { Content = "OK" };
+        sp.Children.Add(new Button { Content = "OK" });
+        sp.Children.Add(new Button { Content = "Cancel" });
 
     }
 }
