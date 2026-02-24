@@ -134,11 +134,21 @@ class MainWindow : Window
     public void MoveBlock(int x, int y, int tx, int ty)
     {
         // #1. Grid 의 x,y 위치에 있는 image 객체의 참조 얻기
-//      var img = grid.GetChild(x, y); // 이런 메소드가 없습니다.
+        //      var img = grid.GetChild(x, y); // 이런 메소드가 없습니다.
 
-
+        // Grid 의 모든 자식을 순회 하면서 조사할수 밖에 없습니다.
+        // => 이부분이 Grid 의 단점
+        Image img;
+        
+        foreach( var e in grid.Children )
+        {
+            if (Grid.GetRow(e) == y && Grid.GetColumn(e) == x)
+                img = (Image)e;
+        }
 
         // #2. image 객체의 Grid 위치 속성을 tx, ty 로 변경
+        Grid.SetRow(img, ty);
+        Grid.SetColumn(img, tx);
     }
 
 
