@@ -26,7 +26,21 @@ class MainWindow : Window
         StackPanel sp = new StackPanel();
 
         Content = sp; // 윈도우 위에 StackPanel 을 붙인것
+                      // Panel 자체는 투명해서 눈에 보이지는 않습니다
 
+
+        // 이제 다양한 컨트롤을 Panel 에 붙이면 됩니다.
+        Button b1 = new Button { Content = "버튼1 " };
+
+        sp.Children.Add(b1);
+
+        Slider slider = new Slider();   
+        sp.Children.Add(slider);
+
+        RadioButton radio = new RadioButton();
+        sp.Children.Add(radio);
+
+        // 실행해보고 잘되신분은 버튼한개 더 추가해 보세요
     }
 }
 
