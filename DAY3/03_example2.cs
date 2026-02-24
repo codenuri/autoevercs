@@ -1,6 +1,6 @@
 ﻿using static System.Console;
 
-// 핵심 #2. 
+// 핵심 #2. 모든 도형의 공통의 기반 클래스인 Shape 도입
 
 // 모든 도형은 공통의 특징이 있습니다.
 // => color 같은 특징..
