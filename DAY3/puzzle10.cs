@@ -138,11 +138,12 @@ class MainWindow : Window
 
         // Grid 의 모든 자식을 순회 하면서 조사할수 밖에 없습니다.
         // => 이부분이 Grid 의 단점
-        Image img;
+        Image img = null;
         
         foreach( var e in grid.Children )
         {
-            if (Grid.GetRow(e) == y && Grid.GetColumn(e) == x)
+            Image i = (Image)e;
+            if (Grid.GetRow(i) == y && Grid.GetColumn(i) == x)
                 img = (Image)e;
         }
 
