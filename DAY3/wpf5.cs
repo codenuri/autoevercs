@@ -8,22 +8,21 @@ class Window
     // Title, Width, Content 등의 다양한 Property 제공
 }
 
-class Button {}
-class Slider {}
+class UIElement { }
+class Button : UIElement {}
+class Slider : UIElement { }
 
 // StackPanel 에 대해서 생각해 봅시다.
 class StackPanel 
 {
     // 여러개의 컨트롤을 관리해야 합니다.
-    public List<?> Children = new List<?>();
+    public List<UIElement> Children = new List<UIElement>();
 
 }
-
-
-
-
-
 */
+
+
+
 
 class MainWindow : Window
 {
