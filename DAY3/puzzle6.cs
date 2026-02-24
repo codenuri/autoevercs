@@ -56,7 +56,7 @@ class MainWindow : Window
         {
             for (int x = 0; x < COUNT; x++)
             {
-                Int32Rect rc = new Int32Rect(0, 0, bw, bh);
+                Int32Rect rc = new Int32Rect(x * bw, y * bh, bw, bh);
                 CroppedBitmap cb = new CroppedBitmap(bm, rc);
 
                 Image img = new Image();
