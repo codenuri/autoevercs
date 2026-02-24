@@ -150,6 +150,12 @@ class MainWindow : Window
         // #2. image 객체의 Grid 위치 속성을 tx, ty 로 변경
         Grid.SetRow(img, ty);
         Grid.SetColumn(img, tx);
+
+        // #3. state 배열의 상태도 변경해야 합니다.
+        // state[y, x] <=> state[ty, tx] 를 서로 교환
+        int tmp = state[y, x];
+        state[y, x] = state[ty, tx];
+        state[ty, tx] = tmp;
     }
 
 
