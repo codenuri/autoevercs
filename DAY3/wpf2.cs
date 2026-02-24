@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 /*
 // C# WPF 내부에 아래 코드가 있습니다.
@@ -18,7 +19,14 @@ class Window
 // => Window 의 파생 클래스를 만들어서 사용
 class MainWindow : Window
 {
+    protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+    {
+        MessageBox.Show("LBUTTONDOWN");
 
+        // base: 기반 클래스 를 의미
+        // 기반 클래스의 함수도 실행되도록하기 위해 자동생성된 코드
+        base.OnMouseLeftButtonDown(e);
+    }
 }
 
 class Program
