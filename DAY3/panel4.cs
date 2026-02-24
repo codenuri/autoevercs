@@ -29,9 +29,13 @@ class MainWindow : Window
         dp.Children.Add(sp);
         dp.Children.Add(tb);
 
+        
+        sp.Orientation = Orientation.Horizontal;
 
-        sp.Children.Add(new Button { Content = "OK" });
-        sp.Children.Add(new Button { Content = "Cancel" });
+        sp.HorizontalAlignment = HorizontalAlignment.Right;
+
+        sp.Children.Add(new Button { Content = "OK", Width= 100, Height = 50 });
+        sp.Children.Add(new Button { Content = "Cancel", Width = 100, Height = 50 });
 
     }
 }
