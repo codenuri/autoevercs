@@ -2,6 +2,7 @@
 using System.Printing;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -87,7 +88,26 @@ class MainWindow : Window
             }
         }
     }
-    
+
+    protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+    {
+        base.OnMouseLeftButtonDown(e);
+
+        // 클릭 된 곳의 좌표를 grid 기반으로 얻기
+//      Point pt = e.GetPosition(this); // this : 자신을 의미.
+                                        // 즉, 윈도우를 기준으로 좌표 얻기
+        Point pt = e.GetPosition(grid); // grid 를 기준으로 좌표 얻기
+
+        // 좌표를 가지고 몇번째 블럭을 클릭했는지 알아야 한다.
+        // => 좌표  / 한 블럭의 크기
+        // => 여기서 한블럭은 그림의 크기가 아닌 grid 의 한블럭 크기
+        int bx = (int)(pt.X / (grid.ActualWidth / COUNT));
+        int by = (int)(pt.Y / (grid.ActualHeight / COUNT));
+
+        Console.WriteLine("{0}, {1} 블럭 클릭", bx, by);
+
+    }
+
 
 
 
