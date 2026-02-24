@@ -27,6 +27,12 @@ class MainWindow : Window
         // 기반 클래스의 함수도 실행되도록하기 위해 자동생성된 코드
         base.OnMouseLeftButtonDown(e);
     }
+
+    protected override void OnMouseRightButtonDown(MouseButtonEventArgs e)
+    {
+        MessageBox.Show("RBUTTONDOWN");
+        base.OnMouseRightButtonDown(e);
+    }
 }
 
 class Program
