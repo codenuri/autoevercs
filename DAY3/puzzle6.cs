@@ -37,11 +37,8 @@ class MainWindow : Window
         Uri uri = new Uri("C:\\totoro.jpg");
         BitmapImage bm = new BitmapImage(uri);
      
-//      bw = (int)((int)bm.Width / COUNT);
-//      bh = (int)((int)bm.Height / COUNT);
-
-        bw = (int)((int)1200 / COUNT);
-        bh = (int)((int)800 / COUNT);
+      bw = (int)((int)bm.PixelWidth / COUNT);
+      bh = (int)((int)bm.PixelHeight / COUNT);
 
 
         // 한개의 블럭만 Grid 에 연결하는 코드
@@ -62,16 +59,17 @@ class MainWindow : Window
         {
             for (int x = 0; x < COUNT; x++)
             {
-                Int32Rect rc = new Int32Rect(x * bw, y * bh, bw, bh);
+                Int32Rect rc = new Int32Rect(x * bw, y * bh, bw, bh); // <= 핵심
 
                 CroppedBitmap cb = new CroppedBitmap(bm, rc);
 
                 Image img = new Image();
                 img.Source = cb;
                 img.Stretch = Stretch.Fill;
+                img.Margin = new Thickness(0.5);
 
 
-                Grid.SetRow(img, y);
+                Grid.SetRow(img, y);        // <== 핵심
                 Grid.SetColumn(img, x);
 
                 grid.Children.Add(img);
