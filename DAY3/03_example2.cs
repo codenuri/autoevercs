@@ -16,12 +16,12 @@ class Shape
 
 
 
-class Rect
+class Rect : Shape
 {
     public void Draw() { WriteLine("Draw Rect"); }
 }
 
-class Circle
+class Circle : Shape
 {
     public void Draw() { WriteLine("Draw Circle"); }
 }
@@ -31,7 +31,8 @@ class Program
     public static void Main()
     {
         // 만들어지는 모든 도형을 보관하기 위한 컬렉션
-        List<Rect> s = new List<Rect>();
+//      List<Rect> s = new List<Rect>(); // Rect 만 보관 가능
+        List<Shape> s = new List<Shape>(); // 모든 도형을 보관할수 있다
 
         while (true)
         {
@@ -39,11 +40,11 @@ class Program
 
             if (cmd == 1)
             {
-                Rect r = new Rect();
+                s.Add(new Rect());
             }
             else if (cmd == 2)
             {
-                Circle c = new Circle();
+                s.Add(new Circle());
             }
         }
     }
