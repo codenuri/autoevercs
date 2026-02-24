@@ -51,6 +51,15 @@ class Program
                     e.Draw();  
                 }
             }
+            else if ( cmd == 8 )
+            {
+                Console.Write("몇번째 만들었던 도형을 복제할까요 >> ");
+                int k = int.Parse( Console.ReadLine());
+
+                // k 번째 도형의 복사본을 생성해서 s 에 추가합니다.
+                // 어떻게 만들어야 할까요 ?
+                // k 번째 도형은 어떤 타입일까요 ?
+            }
         }
     }
 }
