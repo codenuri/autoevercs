@@ -159,19 +159,20 @@ class MainWindow : Window
 
     public void ShuffleMove()
     {
-        int shuffleCount = 1000;   // 섞는 횟수 (충분히 크게)
+        int shuffleCount = 1000;
+        int emptyValue = 24;
 
         for (int i = 0; i < shuffleCount; i++)
         {
-            // 현재 빈칸 위치 찾기
-            int emptyRow = 0;
-            int emptyCol = 0;
+            int emptyRow = -1;
+            int emptyCol = -1;
 
-            for (int r = 0; r < 5; r++)
+            // 빈칸 찾기
+            for (int r = 0; r < 5 && emptyRow == -1; r++)
             {
                 for (int c = 0; c < 5; c++)
                 {
-                    if (state[r, c] == 0)
+                    if (state[r, c] == emptyValue)
                     {
                         emptyRow = r;
                         emptyCol = c;
@@ -180,31 +181,17 @@ class MainWindow : Window
                 }
             }
 
-            // 이동 가능한 방향 저장
-            List<(int r, int c)> possibleMoves = new List<(int, int)>();
+            List<(int r, int c)> moves = new List<(int, int)>();
 
-            // 위
-            if (emptyRow > 0)
-                possibleMoves.Add((emptyRow - 1, emptyCol));
+            if (emptyRow > 0) moves.Add((emptyRow - 1, emptyCol));
+            if (emptyRow < 4) moves.Add((emptyRow + 1, emptyCol));
+            if (emptyCol > 0) moves.Add((emptyRow, emptyCol - 1));
+            if (emptyCol < 4) moves.Add((emptyRow, emptyCol + 1));
 
-            // 아래
-            if (emptyRow < 4)
-                possibleMoves.Add((emptyRow + 1, emptyCol));
+            var move = moves[random.Next(moves.Count)];
 
-            // 왼쪽
-            if (emptyCol > 0)
-                possibleMoves.Add((emptyRow, emptyCol - 1));
-
-            // 오른쪽
-            if (emptyCol < 4)
-                possibleMoves.Add((emptyRow, emptyCol + 1));
-
-            // 랜덤 선택
-            var move = possibleMoves[random.Next(possibleMoves.Count)];
-
-            // swap
             state[emptyRow, emptyCol] = state[move.r, move.c];
-            state[move.r, move.c] = 0;
+            state[move.r, move.c] = emptyValue;
         }
     }
 
