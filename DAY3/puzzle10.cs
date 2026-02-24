@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Media;
 using System.Printing;
 using System.Windows;
 using System.Windows.Controls;
@@ -103,11 +104,40 @@ class MainWindow : Window
 
        // bx, by : 사용자가 클릭한 위치가 Grid 의 몇번째 블럭인가에 대한 정보
 
-       if ( bx > 0 && state[by, bx-1] == EMPTY) // 왼쪽 조사
+        if ( bx > 0 && state[by, bx-1] == EMPTY) // 왼쪽 조사
         {
-            MoveBlock(bx, by, bx-1, by); // (bx, by) 의 image 를 (bx-1, by)로이동
+             MoveBlock(bx, by, bx-1, by); // (bx, by) 의 image 를 (bx-1, by)로이동
         }
+        else if (bx < COUNT-1 && state[by, bx + 1] == EMPTY) // 오른쪽 조사
+        {
+            MoveBlock(bx, by, bx + 1, by); 
+        }
+        else if (by > 0 && state[by-1, bx] == EMPTY) // 위조사
+        {
+            MoveBlock(bx, by, bx, by-1);
+        }
+        else if (by < COUNT-1 && state[by + 1, bx] == EMPTY) // 아래조사
+        {
+            MoveBlock(bx, by, bx, by + 1);
+        }
+        else
+        {
+            // 4방향 모두 이동할수 없다면 "삑"
+            SystemSounds.Beep.Play();
+            return;
+        }
+
+        // 블럭이 이동되었다면 "다맞추었는지 확인 해야 한다"
+        // IsComplete(); // 복습시 이함수 만들어 보세요
     }
+
+
+
+
+
+
+
+
 
 
 
