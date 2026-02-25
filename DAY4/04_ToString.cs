@@ -1,11 +1,33 @@
 using static System.Console;
 
+/*
+class Object
+{
+	public virtual String ToString()
+	{
+		// 자신의 타입을 조사해서
+		// 문자열로 반환하는 코드 
+		// return "내타입의이름"
+	}
+}
+*/
+
 class Point 
 {
 	private int x = 0;
 	private int y = 0;
 
 	public Point(int a, int b) => (x, y) = (a, b);
+
+    public override string ToString()
+    {
+		// 자신의 상태를 문자열로 만들어서 반환
+		// => $ 문자열을 WriteLine() 뿐 아니라 아래 처럼도 사용가능
+
+		string s = $"x={x}, y={y}";
+
+		return s;
+    }
 }
 
 class Program 
