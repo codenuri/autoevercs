@@ -15,8 +15,8 @@ class MainWindow : Window
         //-------------------------------
 
         // 자식 컨트롤 만들어서 패널에 부착
-        btn1 = new Button { Content = "ok1" };
-        btn2 = new Button { Content = "ok1" };
+        btn1 = new Button { Content = "Ok1" };
+        btn2 = new Button { Content = "Ok2" };
         tb = new TextBox { Width = 100, Height = 50 };
         sd = new Slider();
 
@@ -25,7 +25,18 @@ class MainWindow : Window
         sp.Children.Add(sd);
         sp.Children.Add(btn2);
         //--------------------------------
+        // 자식 컨트롤에서 나오는 event 를 처리하기 위해서
+        // 컨트롤에 함수 등록
+        btn1.Click += Btn1_Click;       // DAY4. event3.cs 와 동일원리
 
+    }
+
+    private void Btn1_Click(object sender, RoutedEventArgs e)
+    {
+        // TextBox(tb) 에 입력된 문자열을 꺼내서
+        string s = tb.Text;
+
+        this.Title = s; // 윈도우 캡션바로 설정(this 없어도 됨)
     }
 }
 
