@@ -34,4 +34,20 @@ class Program
         Foo("abc");
     }
 
+    // 변수의 클래스 계층도 출력
+    public static void PrintHierachy(object obj)
+    {
+        Type t = obj.GetType();
+
+        while (true)
+        {
+            Console.Write("{0} ->", t.Name);
+
+            if (t.Name == "Object") break;
+
+            t = t.BaseType;
+        }
+
+        Console.WriteLine(""); // 개행
+    }
 }
