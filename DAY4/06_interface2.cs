@@ -16,33 +16,31 @@ interface ICamera
     void Take(); 
 }
 
+// 진짜 카메라가 없어도 규칙이 있다면 
+// 사용하는 코드를 만들수 있습니다
+// => 규칙대로만 사용하면 됩니다.
+class Person
+{
+    // 핵심 : 구체적인 제품의 이름이 아닌 "규칙"의 이름으로 사용
+    public void UseCamera(ICamera c) { c.Take(); }
+}
+
+// 모든 카메라 제품은 규칙을 지켜야 합니다.
+// => ICamera 를 구현하겠다고 표기하고(상속과 동일한 표기법)
+// => Take() 메소드 구현
 
 
-
-
-
-
-
-
-
-
-
-
-class Camera
+class Camera : ICamera
 {
     public void Take() { WriteLine("take picture"); }
 }
 
-class HDCamera
+class HDCamera : ICamera
 {
     public void Take() { WriteLine("take HD picture"); }
 }
 
-class Person
-{
-    public void UseCamera(Camera c) { c.Take(); }
-    public void UseCamera(HDCamera c) { c.Take(); }
-}
+
 
 class Program
 {
