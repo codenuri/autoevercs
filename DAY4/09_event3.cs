@@ -27,9 +27,10 @@ class Program
     {
         Button btn1 = new Button();
 
-        btn1.Click = Foo;
-//      btn1.Click += Goo;
-        btn1.Click = Goo; // += 하려고 했는데, 실수 했다  
+       
+//      btn1.Click = Foo;
+        btn1.Click += Goo;
+//      btn1.Click = Goo; // += 하려고 했는데, 실수 했다  
                           // 이전에 등록한 함수가 모두 제거된다.
 
         btn1.UserPressButton();  
