@@ -20,6 +20,7 @@ class Object
 class Object
 {
 	// virtual method - 3개
+	// => 기본 구현을 사용해도 되지만, 
 	// => 클래스 설계자가 다시 만들어도 된다는 의미
 
 	// non-virtual
