@@ -16,7 +16,7 @@ class MainWindow : Window
 
         // 자식 컨트롤 만들어서 패널에 부착
         btn1 = new Button { Content = "ok1" };
-        btn2 = new Button { Content = "ok1" }
+        btn2 = new Button { Content = "ok1" };
         tb = new TextBox { Width = 100, Height = 50 };
         sd = new Slider();
 
