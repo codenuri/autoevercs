@@ -25,9 +25,15 @@ class Program
         Point p4 = new Point(1, 2);
 
         // p3, p4 가 "상태가 동일한지 조사" 하는 최선의 코드를 작성해 보세요
-        bool b; // 결과를 b에 담아 보세요
+               
+        bool b = p3 == p4;  // 동일 객체인지 먼저 조사
 
-        // ... 
+        // 동일 객체가 아니라면 상태 조사
+        if (b == false)
+        {
+            b = p3.Equals(p4);
+        }
+
 
         Console.WriteLine($"{b}");
     }
