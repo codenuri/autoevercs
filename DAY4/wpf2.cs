@@ -30,6 +30,13 @@ class MainWindow : Window
         btn1.Click += Btn1_Click;       // DAY4. event3.cs 와 동일원리
 
         btn2.Click += Btn2_Click;
+
+        sd.ValueChanged += Sd_ValueChanged;
+    }
+
+    private void Sd_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+    {
+        tb.Height = sd.Value;
     }
 
     private void Btn2_Click(object sender, RoutedEventArgs e)
