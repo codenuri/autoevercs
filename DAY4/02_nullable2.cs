@@ -28,5 +28,6 @@ if ( n1 != null )
     int n3 = (int)n1; // 조사했으므로 항상 안전
 }
 
-int n4 = n1.GetValueOrDefault(9);
-int n5 = n1.GetValueOrDefault();
+int n4 = n1.GetValueOrDefault(9); // n1 == null 이면 9반환,
+                                  // n1 != null 이면 value
+int n5 = n1.GetValueOrDefault();  // n1 == null 이면 0반환,
