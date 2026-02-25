@@ -18,7 +18,7 @@ class MainWindow : Window
         btn1 = new Button { Content = "Ok1" };
         btn2 = new Button { Content = "Ok2" };
         tb = new TextBox { Width = 100, Height = 50 };
-        sd = new Slider();
+        sd = new Slider { Minimum = 10, Maximum = 100 };
 
         sp.Children.Add(tb);
         sp.Children.Add(btn1);
@@ -29,7 +29,20 @@ class MainWindow : Window
         // 컨트롤에 함수 등록
         btn1.Click += Btn1_Click;       // DAY4. event3.cs 와 동일원리
 
+        btn2.Click += Btn2_Click;
     }
+
+    private void Btn2_Click(object sender, RoutedEventArgs e)
+    {
+        // Slider(sd)   현재값을 읽으세요
+
+        double sz = sd.Value;
+
+        // tb 의 fontsize 속성에 넣으세요
+        tb.FontSize = sz;
+    }
+
+
 
     private void Btn1_Click(object sender, RoutedEventArgs e)
     {
