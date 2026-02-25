@@ -22,7 +22,14 @@ class Program
 		Point p4 = new Point(1,2);
 
 		// #1. == 연산자를 사용한 동일성 조사
-		Console.WriteLine($"{p1 == p2}");
-        Console.WriteLine($"{p3 == p4}");
+		// => 동일 객체 조사 
+		Console.WriteLine($"{p1 == p2}"); // True
+        Console.WriteLine($"{p3 == p4}"); // False
+
+
+        // #2. Object 클래스가 제공하는 Equals() 메소드
+
+        Console.WriteLine($"{p1.Equals(p2)}");
+        Console.WriteLine($"{p3.Equals(p4)}");
     }
 }
