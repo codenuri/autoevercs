@@ -40,12 +40,17 @@ class Program
         Console.WriteLine($"{p1==p2}"); // False, == 재정의 안한 경우
                                         // 재정의 한 경우 true
 
-        bool b = MyReferenceEqual(p1, p2);
+//      bool b = MyReferenceEquals(p1, p2);
+        bool b = object.ReferenceEquals(p1, p2); // 아래와 동일 구현
 
         Console.WriteLine(b);   // False
     }
-    public static bool MyReferenceEqual(object o1, object o2)
+    public static bool MyReferenceEquals(object o1, object o2)
     {
+        // 핵심
+        // p1 == p2 : Point 타입이므로 Point 가 재정의한 == 사용
+        // o1 == o2 : Object 타입이므로 C# == 의 기본 동작(동일객체 비교)
+
         return o1 == o2; 
     }
 }
