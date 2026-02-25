@@ -40,6 +40,7 @@ class MainWindow : Window
     }
 }
 
+
 class Program
 {
     [STAThread]
