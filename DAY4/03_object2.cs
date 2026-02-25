@@ -29,9 +29,13 @@ class Program
         int n = 10; 
         double d = 3.14;
 
-        Foo(n);
-        Foo(d);
-        Foo("abc");
+    //    Foo(n);
+    //    Foo(d);
+    //    Foo("abc");
+
+        PrintHierachy(n);
+        PrintHierachy(d);
+        PrintHierachy("A");
     }
 
     // 변수의 클래스 계층도 출력
