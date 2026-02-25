@@ -11,10 +11,21 @@ class MainWindow : Window
     public MainWindow()
     {
         StackPanel sp = new StackPanel();
-        this.Content = sp;   // this 없어도 됩니다.
-        
+        this.Content = sp;   // this 없어도 됩니다.        
         //-------------------------------
-        
+
+        // 자식 컨트롤 만들어서 패널에 부착
+        btn1 = new Button { Content = "ok1" };
+        btn2 = new Button { Content = "ok1" }
+        tb = new TextBox { Width = 100, Height = 50 };
+        sd = new Slider();
+
+        sp.Children.Add(tb);
+        sp.Children.Add(btn1);
+        sp.Children.Add(sd);
+        sp.Children.Add(btn2);
+        //--------------------------------
+
     }
 }
 
