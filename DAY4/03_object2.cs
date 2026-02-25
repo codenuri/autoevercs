@@ -14,14 +14,19 @@ class Program
         // #2. GetType() 메소드 사용
         // => GetType()은 Object 에서 파생된 메소드 이므로
         //    모든 변수가 가지고 있다
+
+        // Type : 타입의 정보를 관리하는 타입
         Type t = obj.GetType();
 
-        Console.WriteLine(t.Name);
+        // t 가 obj 변수의 타입정보를 가진변수
+        Console.Write("{0} ->", t.Name);
+        Console.Write("{0} ->", t.BaseType.Name);
 
+        Console.WriteLine(""); // 개행
     }
     public static void Main()
     {
-        int n = 10;
+        int n = 10; 
         double d = 3.14;
 
         Foo(n);
