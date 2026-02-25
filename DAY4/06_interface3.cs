@@ -27,10 +27,16 @@ class Program
         int ret2 = s1.CompareTo(s2);
 
 
+		// M1 은 IComparable 인터페이스를 구현한 모든 타입의
+		// 변수(객체)전달 가능
+		M1(n1);
+		M1(s1);
     }
-
 	public static void M1(IComparable ic)
 	{
 	}
-
 }
+// C# 언어 특징
+// => 공통으로 사용되는 이름의 메소드는
+// 1. 인터페이스로 먼저 이름을 약속했고
+// 2. 각 타입을 만들때 인터페이스를 구현하는 문법 사용(상속과 유사문법)
