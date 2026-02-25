@@ -25,7 +25,8 @@ class Program
         Point p4 = new Point(1, 2);
 
         // p3, p4 가 "상태가 동일한지 조사" 하는 최선의 코드를 작성해 보세요
-        
+
+
         //----------------------------------------------------
         bool b = p3 == p4;  // 동일 객체인지 먼저 조사
 
@@ -38,12 +39,21 @@ class Program
         // 위 코드와 유사한 함수가 object 클래스가 제공하는
         // "Equals()" 라는 static method
 
-        // p3.Equals(p4) : instance method(virtual)
+        // p3.Equals(p4)         : instance method(virtual)
         // object.Equals(p3, p4) : static method
 
-        bool b2 = object.Equals(p4, p4);    
+        bool b2 = object.Equals(p3, p4); 
+                    // 1) b = p3 == p4 조사
+                    // 2) b == false 라면 p3.Equals(p4)
 
         Console.WriteLine($"{b}");
         Console.WriteLine($"{b2}");
+
+
+        // [정리]
+        // 상태의 동일 조사
+        bool b3 = p3.Equals(p4); // 가능하고 많이 사용되지만
+                                 // 최선은 아닙니다.
+        bool b4 = object.Equals(p3, p4); // 최선의 코드
     }
 }
