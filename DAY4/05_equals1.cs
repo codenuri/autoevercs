@@ -57,6 +57,8 @@ class Program
         // #2. Object 클래스가 제공하는 Equals() 메소드
 
 		// Object 클래스 기본 구현 : 동일 객체 조사
+		// Point 클래스에서 override : 동일 상태 조사
+		// => 일반적으로 널리 사용되는 기술(Java 도 거의 유사)
         Console.WriteLine($"{p1.Equals(p2)}");
         Console.WriteLine($"{p3.Equals(p4)}");
     }
