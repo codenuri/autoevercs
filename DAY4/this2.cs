@@ -42,7 +42,15 @@ class Program
     {
         Point p1 = new Point(1, 2);
 
-        p1.Set(10, 20);    
+        p1.Set(10, 20);
+
+        // 아래 같이 메소드를 연속으로 호출하면서 상태를 변경하는 기술이
+        // JAVA 에서 아주 널리 사용됩니다
+        // Java 용어중 "빌더" 라는 기술
+        p1.SetX(10).SetY(20).SetX(5);
+
+        // 다른 언어는 "method chaining" 이라고도 합니다.
+        // => Rust 에서 널리 사용
   
 
     }
