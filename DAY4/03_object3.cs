@@ -1,14 +1,20 @@
 ﻿// 03_object3.cs
+
+class Rect
+{
+    public void Draw() { }
+}
+class Circle
+{
+    public void Draw() { }
+}
+
 class Program
 {
     public static void Main()
     {
-        int n = 10;
-        double d = 3.14;
+        List<Rect> s = new List<Rect>();
 
-        PrintHierachy(n);
-        PrintHierachy(d);
-        PrintHierachy("A");
     }
 
     public static void PrintHierachy(object obj)
