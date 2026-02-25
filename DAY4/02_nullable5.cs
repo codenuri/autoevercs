@@ -25,7 +25,17 @@ string ret4 = s2?.ToString(); // <== 아주 널리 사용되는 코드
 // 2. s2 == null 이면 ToString() 메소드호출 안하고, null 반환
 
 // 배열도 reference type
+// => "?." 아니라 "?[]" 도 가능
 int[] arr = null;
 
 int n1 = arr[0]; // 에러. 현재 배열 자체가 없음(null)
+
 int n2 = arr?[0]; // 왜 에러일까요 ?
+                  // 1. arr != null 이면 arr[0] 반환
+                  // 2. arr == null 이면 arr[0] 접근 안하고, null 반환 
+                  // => 그런데, "int n2" 에는 null 을 담을수 없다.
+
+int? n3 = arr?[0]; // ok
+
+if (n3 != null) { }
+
