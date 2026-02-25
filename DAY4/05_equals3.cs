@@ -36,6 +36,16 @@ class Program
         // 동일 객체 인지 조사
         // == 연산자 사용 : 대부분 의도대로 동작하지만
         //                 그렇지 않을수도 있습니다.
-        Console.WriteLine($"{p1==p2}"); // False
+   
+        Console.WriteLine($"{p1==p2}"); // False, == 재정의 안한 경우
+                                        // 재정의 한 경우 true
+
+        bool b = MyReferenceEqual(p1, p2);
+
+        Console.WriteLine(b);   // False
+    }
+    public static bool MyReferenceEqual(object o1, object o2)
+    {
+        return o1 == o2; 
     }
 }
