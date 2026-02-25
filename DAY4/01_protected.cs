@@ -43,3 +43,11 @@ class Program
 }
 
 
+// 윈도우 시작 버튼 누르고
+// => "developer command prompt for vs" 라고 검색 후 나타나는 창 실행
+// => 창에서 "ILDASM" 입력
+// => ILDASM : 중간언어(IL) 의 Disassembly
+
+// ILDASM 창에서
+// => 파일메뉴 => 열기 선택
+// => DAY4/bin/debug/net10.0/day4.dll 열어 보세요
