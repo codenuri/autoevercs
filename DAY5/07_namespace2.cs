@@ -31,5 +31,11 @@ class Program
 
         // Card 클래스의 static method Test() 호출해 보세요
         Graphic.Engine.Card.Test();
+
+        // C# 표준의 모든 클래스는 "System" 이라는 namespace 안에 있습니다.
+        // System : namespace 이름
+        // Console : 클래스 이름
+        // WriteLine() : static method
+        System.Console.WriteLine("aa");
     }
 }
