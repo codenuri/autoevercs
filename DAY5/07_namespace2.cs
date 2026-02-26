@@ -27,8 +27,9 @@ class Program
         Graphic.Point p1 = new Graphic.Point(1, 2);
 
         // Card 객체 만들어 보세요
-        ? c = new ?;
+        Graphic.Engine.Card c = new Graphic.Engine.Card();
 
         // Card 클래스의 static method Test() 호출해 보세요
+        Graphic.Engine.Card.Test();
     }
 }
