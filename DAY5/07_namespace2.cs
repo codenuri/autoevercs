@@ -11,25 +11,24 @@ namespace Graphic
     // namespace 는 중첩 될수 있습니다.
     namespace Engine
     {
-        class Card { }
+        class Card 
+        { 
+            public static void Test() 
+            {
+                Console.WriteLine("Card Test")
+            }
+        }
     }
 }
-
-
-
 class Program
 {
     static void Main()
     {
         Graphic.Point p1 = new Graphic.Point(1, 2);
-        Graphic3D.Point p2 = new Graphic3D.Point(1, 2, 3);
 
-        Console.WriteLine(p1.ToString());
-        Console.WriteLine(p2.ToString());
+        // Card 객체 만들어 보세요
+        ? c = new ?;
 
-
-
-        Point p3 = new Point(1, 2);
-        Console.WriteLine(p2.ToString());
+        // Card 클래스의 static method Test() 호출해 보세요
     }
 }
