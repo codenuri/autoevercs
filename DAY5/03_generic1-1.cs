@@ -8,5 +8,7 @@
         Add(1, 1.2); // int, double
         Add(2.1, 1); // double, int
 
+        Add<int, double>(1, 1.2);
+
     }
 }
