@@ -3,6 +3,10 @@
 
 // 이런 경우는 namespace 문법으로 분리하세요
 
+using Graphic; // Graphic 안에 있는 요소는
+               // Graphic 이름 없이 사용가능
+               // 파일 위에만 사용가능
+
 namespace Graphic
 {
     class Point
@@ -35,6 +39,11 @@ class Program
         Graphic3D.Point p2 = new Graphic3D.Point(1, 2, 3);
 
         Console.WriteLine(p1.ToString());
+        Console.WriteLine(p2.ToString());
+
+
+
+        Point p3 = new Point(1, 2);
         Console.WriteLine(p2.ToString());
     }
 }
