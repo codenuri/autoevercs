@@ -24,7 +24,7 @@ class Program
     {
         int ret1 = 0;  
 
-        int ret2 = AddSub(5, 3, ref ret1); 
+        int ret2 = MyMath.AddSub(5, 3, ref ret1); 
 
         WriteLine($"{ret1}, {ret2}");  // 8, 2
     }
