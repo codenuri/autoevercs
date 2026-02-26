@@ -12,6 +12,9 @@ class MainWindow : Window
 {
     // 주된 UI 담당
 }
+
+// App : UI는 아니고, 프로그램의 life cycle 주기에서 사용자가 하고 싶은 
+//       구현 작성
 class App : Application
 {
     protected override void OnExit(ExitEventArgs e)
