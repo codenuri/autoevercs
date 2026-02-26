@@ -6,11 +6,13 @@
 
 class Button { }
 
-class Window
+// partial class : 하나의 클래스를 여러개 파일로 나누어 작성하는 기술
+// => 모든 파일에서 "partial" 을 붙여야 합니다.
+partial class Window
 {
     public void Show() 
     {
-        Console.WriteLine("Window is shown");
+        Console.WriteLine("Window is shown"); 
     }   
 }
 
@@ -23,5 +25,11 @@ class Program
 
         Window w = new Window();
         w.Show();
+        w.Hide();
     }
 }
+
+// 왜 하나의 클래스를 여러개 파일로 나누나요 ?
+
+// 1. 하나의 클래스를 여러명의 개발자가 같이 만들때
+// 2. 하나의 클래스를 "사람개발자 + 기계" 가 같이 작업할때 - 오후수업
