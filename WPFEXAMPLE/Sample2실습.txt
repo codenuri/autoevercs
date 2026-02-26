@@ -1,0 +1,6 @@
+1. Grid 대신 StackPanel 로 변경
+2. StackPanel 에 Button  1개 , Slider 1개 만드세요 
+3. Button 은 Content="OK"
+4. Slider Minimum="10", Maximum="200"
+
+5. slider 움직일때 Button 의 FontSize 변경되게 해보세요
