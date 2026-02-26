@@ -4,6 +4,8 @@ using static System.Console;
 // 객체지향 언어들의 오류 처리 기술
 // => 예외(exception) 이라는 기술 사용
 
+// 1. 함수(메소드)가 실패 하면 "예외를 던진다"
+// => 호출자가 던져진 예외를 잡지 않으면 프로그램은 비정상 종료
 
 class Database
 {
@@ -30,9 +32,9 @@ class Program
     {
         Database db = new Database("product.db");
 
-        bool ret = db.Backup();
+        db.Backup();
 
-        //if ( ret == false)  { }
+       
 
         db.Remove();
     }
