@@ -18,6 +18,7 @@ class Program
         pt.X = 10;
         pt.Y = 20;
     }
+    // SPoint 는 value 타입이므로 아래 코드는 복사본 생성
     public static void F2(SPoint pt)
     {
         pt.X = 10;
