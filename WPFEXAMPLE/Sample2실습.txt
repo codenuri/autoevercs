@@ -3,4 +3,4 @@
 3. Button 은 Content="OK"
 4. Slider Minimum="10", Maximum="200"
 
-5. slider 움직일때 Button 의 FontSize 변경되게 해보세요
+5. slider 움직일때 Button 의 FontSize 가 slider 의 값으로 변경되게 해보세요
