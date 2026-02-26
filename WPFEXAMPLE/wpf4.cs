@@ -24,6 +24,13 @@ class MainWindow : Window
         sp.Children.Add(btn2);
         //----------------------------
 
+        btn1.Click += Btn1_Click;
+
+    }
+
+    private void Btn1_Click(object sender, RoutedEventArgs e)
+    {
+        Console.WriteLine("btn1 click");
     }
 }
 
