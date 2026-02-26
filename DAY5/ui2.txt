@@ -1,0 +1,9 @@
+﻿
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+	<Button Content="OK1"></Button>
+	<Button Content="OK2"/>
+
+	<Button>OK3</Button>
+
+</StackPanel>
