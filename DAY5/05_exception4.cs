@@ -32,15 +32,16 @@ class Program
 
         try
         {
-            db.Backup();
+            db.Backup(); // 예외가 발생하면 catch{} 로
+                         // 예외가 없으면 catch{} 밖으로(db.Remove())
         }
         catch (Exception ex)
         {
             Console.WriteLine("DB Backup 실패");
             // 여기서 오류를 해결하려고 시도 합니다.
             // 해결할수 없다면 사용자에게 알리고 프로세스를 종료
-            Process p = Process.GetCurrentProcess();
-            p.Kill();
+            //Process p = Process.GetCurrentProcess();
+            //p.Kill();
             // 여기서 종료하지 않으면 프로그램은 계속 실행
         }
 
