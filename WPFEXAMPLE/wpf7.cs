@@ -4,7 +4,8 @@ using System.Windows.Controls;
 using System.Windows.Markup;
 using System.Windows.Media;
 
-// step7
+// step7. Window 자체도 xml 로
+// => 모든 UI 가 XML 로 구축
 
 class MainWindow : Window
 {
@@ -23,7 +24,6 @@ class App : Application
     [STAThread]
     public static void Main()
     {
-
         //--------------------------------------------------
         FileStream fs = new FileStream("../../../ui3.txt",
                                        FileMode.Open, FileAccess.Read);
