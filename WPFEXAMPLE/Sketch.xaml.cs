@@ -38,19 +38,26 @@ namespace Sample4
             // => 선을 그린다는것은
             // => 선 객체를 만들어서 canvas 의 자식으로
 
-            Line line = new Line();
-            line.Stroke = new SolidColorBrush(Colors.Red);
-            line.StrokeThickness = 5;
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
 
-            Point to = e.GetPosition(this);
+                Line line = new Line();
+                line.Stroke = new SolidColorBrush(Colors.Red);
+                line.StrokeThickness = 5;
 
-            line.X1 = ptfrom.X;
-            line.Y1 = ptfrom.Y;
-            line.X2 = to.X;
-            line.Y2 = to.Y;
+                Point to = e.GetPosition(this);
 
-            // Canvas 에 자식으로 추가
-            canvas.Children.Add(line);
+                line.X1 = ptfrom.X;
+                line.Y1 = ptfrom.Y;
+                line.X2 = to.X;
+                line.Y2 = to.Y;
+
+                // Canvas 에 자식으로 추가
+                canvas.Children.Add(line);
+
+                // 현재 점을 다시 시작점으로
+                ptfrom = to;
+            }
         }
     }
 }
