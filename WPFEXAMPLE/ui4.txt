@@ -1,0 +1,14 @@
+﻿<local:MainWindow  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:local="clr-namespace:AAA;assembly=codeonly"
+>
+
+	<StackPanel >
+
+		<Button Content="OK1"></Button>
+		<Button Content="OK2"/>
+
+		<Button>OK3</Button>
+
+	</StackPanel>
+
+</local:MainWindow>
