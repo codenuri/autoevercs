@@ -6,6 +6,7 @@ using static System.Console;
 
 // 1. 함수(메소드)가 실패 하면 "예외를 던진다"
 // => 호출자가 던져진 예외를 잡지 않으면 프로그램은 비정상 종료
+//    프로그램은 계속 실행될수 없다
 
 class Database
 {
