@@ -11,6 +11,13 @@ class DBBackupException : Exception
     public string backupfilename = "a.txt";
 }
 
+class NetworkException : Exception
+{
+    // 네트워크 장애 발생시 사용할 예외
+    // 여기에서도 다양한 정보를 담기 위한 필드, 메소드 제공
+}
+
+
 class Database
 {
     public Database(string dbname) { }
@@ -19,9 +26,14 @@ class Database
     {
         bool success = false;
 
-        if (success == false)
+//      if (...)
         {
-            throw new Exception();
+            throw new NetworkException();  // 네트워크 장애
+        }
+
+//      if (... )
+        {
+            throw new DBBackupException();
         }
 
 
@@ -40,10 +52,17 @@ class Program
         {
             db.Backup();                        
         }
-        catch (Exception ex)
+        catch (DBBackupException ex)
         {
             Console.WriteLine("DB Backup 실패");
-
+        }
+        catch (NetworkException ex)
+        {
+            Console.WriteLine("NetworkException");
+        }
+        catch (Exception ex) // 위에서 잡히지 않은 모든 예외
+        {                    // 모든 예외는 Exception 의 파생 클래스!
+            Console.WriteLine("알수 없는 예외");
         }
 
         db.Remove();
