@@ -7,6 +7,12 @@
 // 장점 : 함수 자체를 여러개 이지만, 사용자는 "한개"처럼 보이게 된다.
 // => 일관된 형태의 라이브러리 구축에 도움이되는 문법
 
+// C#, C++, Java, Swift : 이 문법 지원
+
+// C, Python, Rust : 이 문법 지원 안함
+// 철학 : "모든 코드는 명확 해야 한다"
+//        Square(3) => Square(int), square(Short) 등이 있다면 혼란스럽다
+
 class Math
 {
     public int Square(int x)
